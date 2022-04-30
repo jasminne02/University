@@ -1,0 +1,15 @@
+C:\Visual Studio Projects\C#\ConsoleApp3\bin\Debug\net6.0\ConsoleApp3.exe
+C:\Visual Studio Projects\C#\ConsoleApp3\bin\Debug\net6.0\ConsoleApp3.deps.json
+C:\Visual Studio Projects\C#\ConsoleApp3\bin\Debug\net6.0\ConsoleApp3.runtimeconfig.json
+C:\Visual Studio Projects\C#\ConsoleApp3\bin\Debug\net6.0\ConsoleApp3.dll
+C:\Visual Studio Projects\C#\ConsoleApp3\bin\Debug\net6.0\ConsoleApp3.pdb
+C:\Visual Studio Projects\C#\ConsoleApp3\obj\Debug\net6.0\ConsoleApp3.csproj.AssemblyReference.cache
+C:\Visual Studio Projects\C#\ConsoleApp3\obj\Debug\net6.0\ConsoleApp3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Visual Studio Projects\C#\ConsoleApp3\obj\Debug\net6.0\ConsoleApp3.AssemblyInfoInputs.cache
+C:\Visual Studio Projects\C#\ConsoleApp3\obj\Debug\net6.0\ConsoleApp3.AssemblyInfo.cs
+C:\Visual Studio Projects\C#\ConsoleApp3\obj\Debug\net6.0\ConsoleApp3.csproj.CoreCompileInputs.cache
+C:\Visual Studio Projects\C#\ConsoleApp3\obj\Debug\net6.0\ConsoleApp3.dll
+C:\Visual Studio Projects\C#\ConsoleApp3\obj\Debug\net6.0\refint\ConsoleApp3.dll
+C:\Visual Studio Projects\C#\ConsoleApp3\obj\Debug\net6.0\ConsoleApp3.pdb
+C:\Visual Studio Projects\C#\ConsoleApp3\obj\Debug\net6.0\ConsoleApp3.genruntimeconfig.cache
+C:\Visual Studio Projects\C#\ConsoleApp3\obj\Debug\net6.0\ref\ConsoleApp3.dll
