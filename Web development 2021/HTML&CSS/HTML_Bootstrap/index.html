@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mountain Fire Place</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+	<style type="text/css">
+	    * {
+	    	box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+	    }
+
+		body {
+			font-family: times new roman, serif;
+			background-color: white;
+        }
+
+        header, footer{
+            display: block;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .center{
+            text-align: center;
+        }
+        .space{
+            margin-top: 90px;
+        }
+
+        /*Header*/
+        .header-menu {
+        	background-color: #0f923e;
+        	width: 100%;
+        	padding: 16px 15px;
+        	overflow: hidden;
+        }
+
+        .header-menu a{
+        	color: white;
+        	text-align: center;
+        	font-size: 16px;
+        	margin-left: 30px;
+        	margin-right: 30px;
+        	text-decoration: none;
+            padding: 20px;
+        }
+
+        .header-menu a:hover{
+        	color: #22242b;
+        	background-color: white;
+        }
+
+        .header-area{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+         .background-area{
+            width: 100%;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../HTML_Bootstrap/Images/alps.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .header-box1{
+            background-color: white;
+            float: left;
+            border-width: 10px;
+            border: #22242b;
+            border-style: solid;
+            margin: -30px;
+            padding: 30px;
+            width: 20%;
+            margin-left: 12%;
+        }
+
+        .header-box1 h5{
+            text-align: center;
+            color: #22242b;
+        }
+
+        .header-box1 p{
+            text-align: center;
+            color: #22242b;
+        }
+
+        .header-box2{
+            background-color: white;
+            border-width: 10px;
+            border: #22242b;
+            border-style: solid;
+            margin: -80px;
+            padding: 30px;
+            width: 23%;
+            margin-left: 38%;
+        }
+
+        .header-box2 h5{
+            text-align: center;
+            color: #22242b;
+        }
+
+        .header-box2 p{
+            text-align: center;
+            color: #22242b;
+        }
+
+        .header-box3{
+            background-color: white;
+            float: right;
+            border-width: 10px;
+            border: #22242b;
+            border-style: solid;
+            margin: -30px;
+            padding: 30px;
+            width: 20%;
+            margin-right: 12%;
+        }
+
+        .header-box3 h5{
+            text-align: center;
+            color: #22242b;
+        }
+
+        .header-box3 p{
+            text-align: center;
+            color: #22242b;
+        }
+        
+        /*Main Content*/
+        .title{
+            background-color: white;
+            float: left;
+            margin: 40px;
+        }
+
+        .title h3{
+            background-color: white;
+            color: #2a2c33;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        .hotels{
+            float: left;
+            background-color: white;
+            margin-bottom: 30px;
+        }
+
+        .hotels h5{
+            color: #303239;
+            font-weight: bold;
+        }
+        .hotels p{
+            color: #22242b;
+            line-height: 20px;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .hotels img{
+            float: left;
+            width: 100%;
+            height: 35vh;
+            margin-bottom: 20px;
+        }
+
+        .main-menu-stars{
+        	margin-top: 100px;
+        	margin-bottom: 50px;
+        	width: 100%;
+        }
+        .main-menu-stars h4{
+        	font-weight: bold;
+        	text-align: center;
+        	color: #0f923e;
+        	margin-left: 20px;
+            margin-top: 60px;
+        }
+        .main-menu-stars a{
+        	color: #0f923e;
+        	border-style: solid;
+        	padding: 10px;
+        	padding-right: 30%;
+        	padding-left: 30%;
+        }
+        .main-menu-stars a:hover{
+        	text-decoration: none;
+        	border-width: 1px;
+        	border: #0f923e;
+        	background-color: #f8f9fa;
+        }
+        .main-menu-stars ul{
+        	text-align: center;
+        	list-style: none;
+        	line-height: 40px;
+        }
+
+        .menu{
+        	margin-top: 140px;
+        	margin-bottom: 40px;
+        	width: 100%;
+        }
+        .menu h4{
+        	color: #0f923e;
+        	font-weight: bold;
+        	text-align: center;
+        	margin-left: 20px;
+        }
+        .menu a{
+        	padding: 10px;
+        	padding-left: 30%;
+        	padding-right: 30%;
+        	line-height: 40px;
+        	color: #0f923e;
+        	background-color: #f8f9fa;
+        }
+        .menu a:hover{
+        	text-decoration: none;
+        	background-color: #e0e0e0;
+        }
+        .menu ul{
+        	list-style: none;
+        	text-align: center;
+        }
+        .menu p{
+            margin: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .card-img{
+        	float: left;
+        }
+
+
+        /*Footer*/
+        .footer-container{
+            clear: both;
+            background: #f8f9fa;
+            text-align: center;
+            padding: 1.5em;
+            height: 1%;
+            margin-top: 130px;
+        }
+        .footer-container p{
+            color: #181819;
+            font-size: 14px;
+            padding-top: 2%;
+        }
+
+        .footer_logo{
+            margin: 30px;
+        }
+        .footer_logo h4{
+            margin-top: -20px;
+            color: black;
+            text-align: center;
+        }
+
+        .footer{
+            margin: 20px;
+            margin-left: 20%;
+            margin-right: 20%;
+            display: flex;
+        }
+        .footer-row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .footer-column{
+            width: 30%;
+        }
+        .footer-column h4{
+            font-size: 18px;
+        }
+        .footer-column ul{
+            list-style: none;
+        }
+        .footer-column a{
+            color: #22242b;
+            line-height: 25px;
+        }
+        .footer-column i{
+            padding: 10px;
+        }
+
+        /*Media Queries*/
+        @media only screen and (max-width: 1400px){
+        }
+
+        @media only screen and (max-width: 1200px){
+        }
+
+         @media only screen and (max-width: 992px) {
+            .header-menu a{
+                font-size: 14px;
+            }
+            .header-box1{
+                padding-bottom: 5px;
+            }
+            .header-box1 h5{
+                font-size: 16px;
+            }
+            .header-box1 p{
+                font-size: 13px;
+            }
+            .header-box3{
+                padding-bottom: 5px;
+            }
+            .header-box3 h5{
+                font-size: 16px;
+            }
+            .header-box3 p{
+                font-size: 13px;
+            }
+            .header-box2{
+                padding-bottom: 5px;
+            }
+            .header-box2 h5{
+                font-size: 16px;
+            }
+            .header-box2 p{
+                font-size: 13px;
+            }
+            .main-menu-stars{
+            	margin-top: 10px;
+            	padding: none;
+            }
+            .main-menu-stars a{
+            	font-size: 14px;
+            	padding-left: 10px;
+            	padding-right: 10px;
+            	padding-top: none;
+            }
+            .menu h4{
+            	margin-left: 0;
+            }
+            .menu a{
+            	font-size: 11px;
+            	margin-left: -20px;
+            }
+            .footer-column{
+                font-size: 14px;
+            }
+            .footer-column{
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width:  768px){
+        	.header-menu a{
+        		margin-left: 10px;
+        		margin-right: 10px;
+        	}
+            .header-box1{
+                width: 40%;
+                height: 25vh;
+                margin-top: -100px;
+                margin-left: 35px;
+            }
+            .header-box3{
+                width: 40%;
+                height: 25vh;
+                margin-top: -100px;
+                margin-right: 10px;
+            }
+            .header-box2{
+                width: 40%;
+                margin-top: -300px;
+                margin-left: 160px;
+                height: 25vh;
+            }
+            .menu p{
+                font-size: 12px;
+            }
+        }
+
+        @media only screen and (max-width: 576px){
+            .header-menu a{
+                font-size: 13px;
+                margin-left: 0.3%;
+                margin-right: 0.3%;
+                padding: none;
+            }
+            .header-box1{
+                width: 50%;
+                margin-left: 25%;
+                padding: 12px;
+                height: 18.5vh;
+                margin-top: -350px;
+
+            }
+            .header-box3{
+                width: 50%;
+                height: 18.5vh;
+                padding: 12px;
+                margin-top: -70px;
+                margin-right: 25%;
+            }
+            .header-box2{
+                width: 50%;
+                height: 18.5vh;
+                padding: 12px;
+                margin-top: -200px;
+                margin-right: 25%;
+                margin-left: 25%;
+            }
+            .main-menu-stars a{
+        	    color: #0f923e;
+        	    border-style: solid;
+        	    padding: 10px;
+        	    padding-right: 30%;
+        	    padding-left: 30%;
+            }
+            .menu{
+            	margin-top: 20px;
+            }
+            .menu h4{
+            	margin-left: 20px;
+            }
+            .menu a{
+            	font-size: 16px;
+            }
+            .menu p{
+                font-size: 16px;
+            }
+            .footer-column{
+                width: 80%;
+                margin-left: 5%;
+                margin-right: 10%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+	<header>
+		<!--Top Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+        	    <div class="center">
+        		    <a class="navbar-brand" href="#logo"><i class="fa fa-tree">Mountain<br> Fire Place</i></a>
+        	    </div>
+        	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#trips">Trips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+
+        <div class="center">
+            <div class="header-menu">
+        	    <a href="#hotels">Hotels</a>
+        	    <a href="#campings">Camping</a>
+        	    <a href="#ski">Ski Vacantions</a>
+        	    <a href="#promotions">Promotions</a>
+            </div>
+        </div>
+
+        <div class="background-area"></div>
+        <div class="header-area">
+            <div class="container">
+                <div class="header-box1">
+                    <h5>Camping</h5>
+                    <hr>
+                    <p>Campsites in the Hills & Mountains</p>
+                </div>
+                <div class="header-box2">
+                    <h5>Luxury Hotels</h5>
+                    <hr>
+                    <p>5 Star Ratings</p>
+                </div>
+                <div class="header-box3">
+                    <h5>Ski Resorts</h5>
+                    <hr>
+                    <p>With Modern Lifts</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space"><hr style="width:100%"></div>
+	</header>
+
+	<main>
+		<div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                	<div class="clearfix">
+                		<div class="title" id="hotels"><h3>Hotels</h3><hr style="width:100%"></div>
+                		<!--Hotels-->
+                        <div class="hotels">
+                    		<h5>The Chedi Adermatt</h5>
+                            <img src="../HTML_Bootstrap/Images/hotel1.jpg">
+                            <p>Located in a quiet area in Andermatt amidst the beautiful nature of the Swiss Alps, 850 m from the Gemsstockbahn Cable Car Station, The Chedi Andermatt combines Swiss hospitality tradition with Asian elegance. It boasts more than 200 fireplaces, an indoor and outdoor pool, a 24-hour reception, and free Wi-Fi. Free luggage storage is provided, and the lobby is equipped with 2 fireplaces. The Chedi Andermatt features a 2,400-square-metre wellness and spa area, comprising a fitness centre, a hot tub, a steam bath and a sauna. Massages are available on request. The pool area is fitted with padded day beds.</p>
+                    	</div>
+                    	<div class="hotels">
+                            <h5>Granbaita Dolomites</h5>
+                            <img src="../HTML_Bootstrap/Images/hotel3.jpg">
+                            <p>Granbaita Dolomites offers views of the Sella Group and the luxury of a 5-star superior hotel. Its wellness centre includes indoor and outdoor swimming pools, and parking is free.Hotel Granbaita Dolomites features elegant and large suites with private balcony and satellite TV. Wi-Fi access is available in the lobby. It's restaurant serves local specialities, and has a list of selected wines.The Granbaita Dolomites is just in the center of Selva di Val gardena. The trekking and mountain bike paths of the Sassolungo Mountains are within easy reach.</p>
+                        </div>
+
+                        <!--Camping-->
+                        <div class="title" id="campings"><h3>Camping</h3><hr style="width:100%"></div>
+                        <div class="hotels">
+                            <h5>D’Olde Kamp, Ansen, NetherlandsD’Olde Kamp, Ansen, Netherlands</h5>
+                            <img src="../HTML_Bootstrap/Images/camp1.jpg">
+                            <p>Ansen, Drenthe is home to the beautiful Campsite D'Olde Kamp, an intimate campsite, located in a wood.In the hustle and bustle of everyday life, everyone needs space to enjoy the great outdoors and a little relaxation. And this campsite certainly offers you space. Camping offers which are marked out and pitches with some shade. Spaciously laid out camping pitches make it possible to camp in a quiet and pleasant way. A stay here will bring guaranteed rest, space and freedom.</p>
+                        </div>
+
+                        <!--Ski Resorts-->
+                        <div class="title" id="ski"><h3>Ski Resorts</h3><hr style="width:100%"></div>
+                        <div class="hotels">
+                            <h5>Les Rives d'Argentière</h5>
+                            <img src="../HTML_Bootstrap/Images/ski4.jpg">
+                            <p>Situated in the centre of Argentière, Les Rives d'Argentière offers 5* chalets each with a hot tub on the terrace, a heated ski equipment room, a heated pool, a sauna, a gym, a cinema room, a wine cellar and access to an underground car park.Additional facilities provided for your convenience include a washing machine, ironing facilities and a dishwasher. Upon request, guests can also benefit from room service, a chauffeur service and a concierge.</p>
+                        </div>
+                        <div class="hotels">
+                            <h5>Grand hôtel des alpes</h5>
+                            <img src="../HTML_Bootstrap/Images/ski5.jpg">
+                            <p>Situated in Chamonix, at the foot of Mont Blanc and at the heart of the Alpine mountains, the Grand Hotel des Alpes offers unique accommodation. Enjoy its stylish woodwork, comfortable lounge with a view of the Massif de Mont Blanc or relax at the bar next to the fireplace.This lovely location allows guests the opportunity to appreciate the typical charm of the city centre and the enchanting surrounding area all year round.The property is a ski pass vendor and also offers a free shuttle services to the Chamonix ski slopes upon request in winter.</p>
+                        </div>
+                    </div>
+
+                    <!--Promotions-->
+                    <div class="title" id="promotions"><h3>Promotions</h3><hr style="width:100%"></div>
+                    <div class="card-img">
+                        <div class="row row-cols-2 row-cols-md-3 g-4">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../HTML_Bootstrap/Images/hotel2.jpg" class="card-img-top" alt="...">
+                                    <a href="#card" style="text-decoration: none;">
+                                	    <div class="card-body">
+                                            <h5 class="card-title">Kempinski St Moritz</h5>
+                                            <p class="card-text"><hr>Restaurant<hr>Indoor pool<hr>Free parking</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../HTML_Bootstrap/Images/ski6.jpg" class="card-img-top" alt="...">
+                                    <a href="#card" style="text-decoration: none;">
+                                	    <div class="card-body">
+                                           <h5 class="card-title">Alpina Eclectic Hotel</h5>
+                                           <p class="card-text"><hr>Spa<hr>Fitness<hr>Night Club</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../HTML_Bootstrap/Images/ski7.jpg" class="card-img-top" alt="...">
+                                    <a href="#card" style="text-decoration: none;">
+                                	    <div class="card-body">
+                                           <h5 class="card-title">Les Balcons du Savoy</h5>
+                                           <p class="card-text"><hr>Free WiFi<hr>Restaurant<hr>Ski Slope</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                	<div class="main-menu-stars">
+                        <h4>Star Ratings</h4>
+                        <ul>
+                        	<li><a href="#allhotels">All Hotels</a></li>
+                        	<li><a href="#star"><i class="fa fa-star"></i></a></li>
+                       		<li><a href="#star"><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
+                       		<li><a href="#star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
+                       		<li><a href="#star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
+                       		<li><a href="#star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></a></li>
+                       		<li><a href="#unrated">Unrated</a></li>
+                       	</ul>
+                    </div>
+                    <div class="menu">
+                       	<h4>Hotels Features</h4>
+                       	<ul>
+                      		<li><a href="#">All inclusive</a></li>
+                            <li><a href="#ski">Ski Slopes</a></li>
+                       		<li><a href="#">Spa center</a></li>
+                       		<li><a href="#">Pool</a></li>
+                       		<li><a href="#">Restaurants</a></li>
+                       		<li><a href="#">Bar</a></li>
+                       		<li><a href="#">Indoor pool</a></li>
+                       		<li><a href="#">Room service</a></li>
+                      		<li><a href="#">Fitness center</a></li>
+                       		<li><a href="#">Massage</a></li>
+                       		<li><a href="#">Nightclub/ DJ</a></li>
+                       		<li><a href="#">Hot tub</a></li>
+                       		<li><a href="#">Horse riding</a></li>
+                       	</ul>
+                    </div>
+                    <div class="menu">
+                        <h4>Room type</h4>
+                        <ul>
+                            <li><a href="#ski">Single room</a></li>
+                            <li><a href="#">Double room</a></li>
+                            <li><a href="#">Triple</a></li>
+                            <li><a href="#">Quand</a></li>
+                            <li><a href="#">Twin</a></li>
+                            <li><a href="#">Studio</a></li>
+                            <li><a href="#">Suit</a></li>
+                            <li><a href="#">President suit</a></li>
+                            <li><a href="#">Apartments</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu">
+                    	<h4>Locations</h4>
+                    	<ul>
+                    		<li><a href="#">France</a></li>
+                            <li><a href="#">Ireland</a></li>
+                    		<li><a href="#">Italy</a></li>
+                    		<li><a href="#">Switzerland</a></li>
+                            <li><a href="#">Norway</a></li>
+                    		<li><a href="#">Germany</a></li>
+                    		<li><a href="#">Bulgaria</a></li>
+                    		<li><a href="#">Netherlands</a></li>
+                    		<li><a href="#">Belgium</a></li>
+                            <li><a href="#">Sweden</a></li>
+                            <li><a href="#">Finland</a></li>
+                            <li><a href="#">Iceland</a></li>
+                    	</ul>
+                    </div>
+                    <div class="menu">
+                        <h4>About us</h4>
+                        <p>Welcome to Mountain Fire Place, your number one source for the best hotels. We're dedicated to giving you the very best of any vacations, with a focus on customer service.<br>Founded in 2021, Mountain Fire Place has come a long way from its beginnings in Bulgaria. We now serve customers all over the world.<br>We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</main>
+
+	<footer class="footer-container" class="space">
+            <div class="footer_logo">
+                <a class="navbar-brand" href="#logo"><h4><i class="fa fa-tree">Mountain<br>Fire Place</i></h4></a>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <div class="footer-row">
+                        <div class="footer-column">
+                            <h4>Help Center</h4>
+                            <ul>
+                                <li><a href="">Travel Guide</a></li>
+                                <li><a href="">Our Policy</a></li>
+                                <li><a href="">Help</a></li>
+                                <li><a href="">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><a href="">About us</a></li>
+                                <li><a href="">Work for us</a></li>
+                                <li><a href="">Affiliate Program</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Countact us</h4>
+                            <ul>
+                                <li><a href="#">+365 00 0000000</a></li>
+                                <li><a href="#">mountain@gmail.com</a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i><i class="fa fa-instagram"></i><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space"><hr style="width:90%"></div>
+            <p>Copyright ©2021 PetShop. Design By Jasmine Yabari</p>
+    </footer>
+</body>
+</html>

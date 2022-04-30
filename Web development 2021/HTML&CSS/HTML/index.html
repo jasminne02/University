@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Shop</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+    <style type="text/css">
+    	* {
+	    	box-sizing: border-box;
+	    	margin: 0;
+	    	padding: 0;
+    	}
+	  
+	     body{
+	    	font-family: times new roman, serif;
+	    	background-color: #373737;
+	    }
+
+	    header, footer{
+	    	display: block;
+	    	overflow: hidden;
+	    	margin: 0;
+	    }
+
+	    #main-container{
+			margin: 0;
+	        width: 100%;
+	        background: #fff;
+            line-height: 100%;
+		}
+
+		#header-container{
+			background: #ccc;
+	        padding: none;
+	        margin: none;
+	        width: 100%;
+		}
+
+		#content-container{
+			float: left;
+	        width: 100%;
+		}
+
+		#footer-container{
+	        background: black;
+	        text-align: center;
+	        padding: 1.5em;
+	        height: auto;
+	        margin-top: 130px;
+	        margin-bottom: 0;
+		}
+
+		#footer-container p{
+			color: white;
+			padding-top: 3%;
+			font-size: 14px;
+		}
+
+		/*Top navigation bar*/
+        .navbar{
+            width: 100%;
+            height: 85px;
+            background-color: black;
+            line-height: 75px;
+            padding: 0px 80px;
+            position: fixed;
+        }
+        .navbar-logo{
+            float: left;
+        }
+        .navbar-logo p{
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            color: white;
+        }
+        .navbar ul{
+            float: right;
+        }
+        .navbar ul li{
+           list-style: none;
+           display: inline-block;
+        }
+       .navbar ul li a{
+           text-decoration: none;
+           color: white;
+           font-size: 18px;
+           text-transform: uppercase;
+           padding: 10px 20px;
+           border-radius: 4px;
+        }
+       .navbar ul li a:hover{
+           color: black;
+           background-color: white;
+        }
+
+        .material-icons{
+           font-size: 30px; 
+           margin-top: 75%; 
+           margin-right: 5%;
+        }
+       .checkbtn{
+           color: white;
+           cursor: pointer;
+           float: right;
+           display: none;
+        }
+        #check{
+           display: none;
+        }
+
+        @media screen and (max-width:  900px){
+            .navbar{
+                padding: 0px 50px;
+            }
+            .checkbtn{
+                display: block;
+            }
+           .navbar-logo p{
+                font-size: 30px;
+            }
+           .navbar ul{
+                width: 100%;
+                height: 100vh;
+                background-color: gray;
+                position: fixed;
+                top: 75px;
+                left: -100%;
+                text-align: center;
+                transition: 0.3s ease;
+            }
+            .navbar ul li{
+                display: block;
+                margin: 60px 0px;
+               line-height: 20px;
+            }
+            #check:checked ~ ul{
+               left: 0;
+            }
+        }
+
+
+
+		/*Header*/
+        .background-area{
+	        width: 100%;
+	        height: 100vh;
+	        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../HTML/Images/background1.jpg);
+	        background-size: cover;
+	        background-repeat: no-repeat;
+        }
+
+        .header-content-area{
+	        height: 100%;
+	        display: flex;
+	        justify-content: center;
+	        align-items: center;
+        } 
+
+        .header-content {
+	        text-align: center;
+        }
+
+        .header-content h1{
+	        font-size: 52px;
+	        color: #fff;
+	        padding: 3px;
+        }
+
+        .header-content p{
+	        font-size: 27px;
+	        color: #ddd;
+	        margin: 30px;
+	        margin-bottom: 95px;
+	    }
+
+	    /*Layout*/
+	    .column-left{
+	    	float: left;
+	    	width: 75%;
+	    	margin: 0;
+	    	margin-top: 30px;
+	    	margin-bottom: 30px;
+	    	display: block;
+	    }
+
+	    .column-right{
+	    	margin-top: 60px;
+	    	margin: 0;
+	    	float: left;
+	    	width: 25%;
+	    	display: block;
+	    }
+
+	    .row{
+	    	content: "";
+	    	display: table;
+	    	clear: both;
+	    }
+
+	    /*Article*/
+        .article{
+        	background-color: white;
+        	margin-top: 70px;
+	        margin-left: 40px;
+	        margin-right: 40px;
+	        padding: 30px;
+	        overflow: auto;
+	        border-radius: 5px;
+	        outline-color: black;
+	        outline: dashed;
+        }
+        .article h2{
+        	font-size: 27px;
+	        font-weight: bold;
+	        margin-bottom: 10px;
+	        text-align: center;
+	        color: black;
+	        text-decoration: none;
+        }
+        .article h3{
+        	margin-bottom: 10px;
+        	text-align: center;
+        }
+        .article p{
+        	text-align: center;
+        	font-size: 17px;
+        	line-height: 100%;
+        }
+
+        /*Title*/
+        .title{
+        	overflow: auto;
+        	padding: 30px;
+        	margin-top: 60px;
+        	line-height: 50px;
+        }
+        .title h2{
+        	font-size: 27px;
+        	font-weight: bold;
+        	text-align: center;
+        	color: white;
+        }
+
+        /*Pet Title*/
+        .pet_t {
+	        margin: 15px;
+	        margin-top: 20px;
+	        padding: 9px;
+	        overflow: auto;
+        }
+        
+        .pet_t h3{
+	        font-size: 25px;
+	        font-weight: bold;
+	        text-align: center;
+	        color: white;
+	        text-decoration: none;
+        }
+
+        /*Pets*/
+        .pets {
+	        margin: 30px;
+	        margin-top: 15px;
+	        padding: 10px;
+	        overflow: auto;
+	        width: 73.33%;
+	        border-radius: 5px;
+	        background-color: white;
+	        float: left;
+        }
+
+        .pets a{
+	        float: left;
+	        color: black;
+	        text-align: left;
+	        padding: 5px;
+	        font-size: 16px;
+	        text-decoration: none;
+        }
+
+        .pets a:hover{
+	        background-color: lightgray;
+	        border-radius: 4px;
+        }
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        /*More Content*/
+        .column-more-content{
+        	width: 20%;
+        	float: left;
+        	margin: 20px;
+        }
+        .more-content{
+        	padding: 5px;
+        	margin: 20px;
+        	overflow: auto;
+        	border-radius: 5px;
+        	background-color: white;
+        }
+        .more-content a{
+        	color: black;
+        	padding: 5px;
+        	float: left;
+        	text-align: left;
+        	font-size: 16px;
+        	text-decoration: none;
+        }
+        .more-content a:hover{
+        	background-color: lightgray;
+        	border-radius: 4px;
+        }
+        
+        /*Menu*/
+        .menu{
+            margin: 30px;
+            text-align: center;
+            overflow: auto;
+        }
+        .menu h3{
+        	display: block;
+        	color: black;
+        	padding: 8px;
+        	margin-top: 15px;
+        	margin-bottom: 9px;
+        	width: 100%;
+        	font-weight: bold;
+        }
+        .menu a{
+        	display: block;
+        	color: white;
+            background-color: black;
+            padding: 20px;
+            margin-bottom: 9px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .menu a:hover{
+        	background-color: white;
+        	color: black;
+        }
+        .menu ul{
+        	list-style: none;
+        	text-align: center;
+        }
+        .menu p{
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+
+        /*Footer*/
+        .footer-background{
+	        width: 100%;
+	        height: 80vh;
+	        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../HTML/Images/bottom-background1.jpg);
+	        background-size: cover;
+	        background-repeat: no-repeat;
+        }
+        .footer_logo{
+            margin-top: 10px;
+        }
+        .footer_logo a{
+        	text-decoration: none;
+        }
+        .footer_logo h4{
+            color: white;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .footer{
+            margin: 20px;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+        .footer-content-area{
+        	height: 100%;
+	        display: flex;
+	        justify-content: center;
+	        align-items: center;
+        }
+        .footer-row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .footer-column{
+            width: 33.33%;
+        }
+        .footer-column h4{
+        	color: white;
+            font-size: 18px;
+        }
+        .footer-column ul{
+        	font-size: 18px;
+        	color: white;
+            list-style: none;
+            padding-right: 100px;
+            padding-left: 100px;
+        }
+        .footer-column a{
+        	text-decoration: none;
+            color: white;
+            line-height: 30px;
+        }
+        .footer-column a:hover{
+        	text-decoration: underline;
+        }
+        .footer-column i{
+            padding: 10px;
+        }
+
+
+        /*Media Queries*/
+        @media only screen and (max-width: 1400px){
+        	 .background-area{
+            	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../HTML/Images/background2.jpg);
+            	background-repeat: no-repeat;
+            	background-size: cover;
+            }
+        }
+
+        @media only screen and (max-width: 1200px){
+        	.header-content h1{
+        		font-size: 48px;
+        	}
+        	.header-content p{
+        		font-size: 25px;
+        	}
+        	.column-more-content{
+        		width: 40%;
+        		margin: 5px;
+        	}
+        	.more-content{
+        		margin-left: 35%;
+        		margin-right: 5%;
+        	}
+        }
+
+	    @media only screen and (max-width: 992px) {
+            .background-area{
+        	    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../HTML/Images/background3.jpg);
+            	background-repeat: no-repeat;
+            	background-size: cover;
+            }
+            .bottom-background{
+	            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../HTML/Images/bottom-background2.jpg);
+            }
+            .footer-column ul{
+            	font-size: 15px;
+            }
+            .footer-column a{
+            	line-height: 15px;
+            }
+        }
+
+        @media only screen and (max-width:  768px){
+        	.header-content p{
+	            font-size: 25px;
+	            line-height: 10px;
+	        }
+            .footer-column{
+	        	width: 50%;
+	        	margin-bottom: 30px;
+	        }
+	        .column-left{
+	        	width: 100%;
+	        }
+	        .column-right{
+	        	width: 100%;
+	        	margin-top: 30px;
+	        }
+	        .column-more-content{
+	        	width: 30%;
+	        }
+        }
+
+        @media only screen and (max-width: 576px){
+        	.navbar-logo p{
+        		font-size: 25px;
+        	}
+            .header-content h1{
+            	font-size: 5vh;
+            	margin-top: 130px;
+            }
+            .header-content p{
+            	margin-left: 10px;
+            	margin-right: 10px;
+	            font-size: 2.3vh;
+	            line-height: 20px;
+	        }
+        	.background-area{
+        	    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../HTML/Images/background4.jpg);
+            	background-repeat: no-repeat;
+            	background-size: cover;
+            }
+            #footer-container p{
+			    font-size: 11px;
+		    }
+		    .footer-column {
+		    	width: 100%;
+		    	margin-bottom: 20px;
+		    }
+		    .column-more-content{
+		    	width: 90%;
+		    }
+		    .more-content{
+		    	margin-left: 5%;
+		    	margin-right: 5%;
+		    }
+		    .column{
+		    	width: 90%;
+		    	margin-left: 5%;
+		    	margin-right: 5%;
+		    }
+        }
+
+    </style>
+</head>
+
+<body>
+	<section id="main-container">
+		<nav class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="material-icons">menu</i>
+            </label>
+            <div class="navbar-logo">
+                <p>PetShop<i class="fa fa-paw"></i></p>
+            </div>
+            <ul>
+                <li><a href="#default" class="navbar-active">Home</a></li>
+                <li><a href="#search">Search</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+
+		<header id="header-container">
+			<div class="background-area">
+				<div class="header-content-area">
+					<div class="header-content">
+						<h1>Pet Shop</h1>
+                        <p>Get a pet now with 20% discount off the price</p>
+					</div>
+				</div>
+			</div>
+	    </header>
+
+	    <section id="content-container">
+	    	<div class="row">
+	    		<!--Column Left-->
+	    		<div class="column-left">
+	    			<!--Article-->
+			        <article class="article">
+				        <h2>Today's Article</h2>
+				        <h3>Dogs make people feel good</h3>
+				        <p>Perhaps the most intuitive benefit of sharing your life and home with a canine friend is that dogs give you "feel-good vibes" almost instantly. </p>
+				        <p>It is really difficult not to cheer up, even after a hard day's work, when you are greeted with - often vocal - enthusiasm by a friendly dog. This, researchers explain, is due to the effect of the "love hormone" oxytocin. "During the last decades," write the authors of a review that featured in Frontiers in Psychology, “animal assistance in therapy, education, and care has greatly increased.” When we interact with dogs, our oxytocin levels shoot up. Since this is the hormone largely resposible for social bonding, this hormonal "loveinjection" boosts our psychological well-being. Previous studies analyzed in the review have revealed that dog owners have more positive social interactions, and that the presence of canine friends makes people more trusting...and also more deserving of trust.</p>
+				        <p>Moreover, dogs appear to reduce symptoms of depression and render people more resilient to stress. That is why dogs are often used as therapy animals. As researcher Brian Hare, of Duke University in Durham, NC, noted in an interview for The Washington Post:</p>
+           				<p>“Dogs make people feel good, and their only job is to help people in stressful situations feel better.”</p>
+			         	<p>Researchers hypothesize that therapy dogs can improve the psychological well-being of children going through cancer therapy, as well as help individuals diagnosed with post-traumatic stress disorder (PTSD) deal with disruptive symptomsTrusted Source or even prevent the onset of PTSD episodes.</p>
+			        </article>
+
+			        <!--Promotion-->
+			        <section class="title">
+				        <h2>Pet Promotions</h2>
+				        <hr style="width: 98%;">
+			        </section>
+
+	         		<!--Cats-->
+                    <section class="pet_t" id="cats">
+                        <h3>Cats</h3>
+                    </section>
+
+                   <div class="row">
+   	                    <div class="column">
+   		                    <div class="pets">
+   			                    <a href="#scottish"> <img src="../HTML/Images/scottish.jpg" alt="Cat" style="width:100%">Scottish Fold Cat<br>$400</br></a>
+   		                    </div>
+   	                    </div>
+   	                    <div class="column">
+   		                    <div class="pets">
+   			                    <a href="#bengal"><img src="../HTML/Images/bengal.jpg" alt="Cat" style="width:100%">Bengal Cat<br>$1650</br></a>
+   		                    </div>
+   	                    </div>
+   	                    <div class="column">
+   		                    <div class="pets">
+   			                    <a href="#ragdoll"><img src="../HTML/Images/ragdoll.jpg" alt="Cat" style="width:100%">Ragdoll Cat<br>$800</br></a>
+   		                    </div>
+   	                    </div>
+                    </div>
+
+                    <!--Dogs-->
+                    <section class="pet_t" id="dogs">
+            	       <h3>Dogs</h3>
+                    </section>
+
+                    <div class="row">
+                       	<div class="column">
+            		        <div class="pets">
+                                <a href="#beagle"><img src="../HTML/Images/beagle.jpg" alt="Dog" style="width:100%">Beagle Dog<br>$1000</br></a>            			
+            		        </div>
+            	        </div>
+            	        <div class="column">
+            		        <div class="pets">
+                                <a href="#chinuahua"><img src="../HTML/Images/chihuahua.jpg" alt="Dog" style="width:100%">Chuhuahua<br>$1200</br></a>            			
+            		        </div>
+            	        </div>
+            	        <div class="column">
+            		        <div class="pets">
+                                <a href="#poodle"><img src="../HTML/Images/poodle.jpg" alt="Dog" style="width:100%">Poodle<br>$700</br></a>            			
+            		        </div>
+            	        </div>
+                    </div> 
+
+                    <!--Rabbits-->
+                    <section class="pet_t" id="rabbits">
+            	        <h3>Rabbits</h3>
+                    </section>
+
+                    <div class="row">
+                      	<div class="column">
+            	        	<div class="pets">
+                                <a href="#mini-lop"><img src="../HTML/Images/mini-lop.jpg" alt="Dog" style="width:100%">Mini Lop<br>$65</br></a>            			
+            		        </div>
+            	        </div>
+            	        <div class="column">
+            		        <div class="pets">
+                                <a href="#cashmere-lop"><img src="../HTML/Images/cashmere-lop.jpg" alt="Dog" style="width:100%">Cashmere Lop<br>$40</br></a>
+            		        </div>
+            	        </div>
+            	        <div class="column">
+            		        <div class="pets">
+                                <a href="#angora-rabbit"><img src="../HTML/Images/angora-rabbit.jpg" alt="Dog" style="width:100%">Angora Rabbit<br>$100</br></a>
+            		        </div>
+            	        </div>
+                    </div>
+
+                    <!--Birds-->
+                    <section class="pet_t" id="birds">
+            	        <h3>Birds</h3>
+                    </section>
+
+                    <div class="row">
+            	        <div class="column">
+            		        <div class="pets">
+            			        <a href="#macaw"><img src="../HTML/Images/macaw.jpg" alt="Birds" style="width:100%">Macaw Parrot<br>$1099</a>
+            		        </div>
+            	        </div>
+            	        <div class="column">
+            		        <div class="pets">
+            			        <a href="#cockatiel"><img src="../HTML/Images/cockatiel.jpg" alt="Birds" style="width:100%">Cockatiel<br>$150</a>
+            		        </div>
+            	        </div>
+            	        <div class="column">
+            		        <div class="pets">
+            			        <a href="#amazon"><img src="../HTML/Images/amazon.jpg" alt="Birds" style="width:100%">Amazon Parrot<br>$1500</a>
+            		        </div>
+            	        </div>
+                    </div>
+
+                    <!--Fish-->
+                    <section class="pet_t" id="fish">
+            	        <h3>Fish</h3>
+                    </section>
+
+                    <div class="row">
+            	        <div class="column">
+            		        <div class="pets">
+            			        <a href="#clown-fish"><img src="../HTML/Images/clown-fish.jpg" alt="Fish" style="width:100%">Clown Fish<br>$40</a>
+            		        </div>
+            	        </div>
+            	        <div class="column">
+            		        <div class="pets">
+            			        <a href="#betta-fish"><img src="../HTML/Images/betta-fish.jpg" alt="Fish" style="width:100%">Betta Fish<br>$20</a>
+            		        </div>
+            	        </div>
+            	        <div class="column">
+            		        <div class="pets">
+            			        <a href="#goldfish"><img src="../HTML/Images/goldfish.jpg" alt="Fish" style="width:100%">Goldfish<br>$24</a>
+            		        </div>
+            	        </div>
+                    </div>
+
+                    <!--Reptiles-->
+                    <section class="pet_t" id="reptiles">
+            	        <h3>Reptiles</h3>
+                    </section>
+
+                    <div class="row">
+                     	<div class="column">
+            	          	<div class="pets">
+            			        <a href="#water-dragon"><img src="../HTML/Images/water-dragon.jpg" alt="Lizard" style="width:100%">Water Dragon<br>$50</a>
+            		        </div>
+            	        </div>
+            	        <div class="column">
+            		        <div class="pets">
+            			        <a href="#leopard-gecko"><img src="../HTML/Images/gecko.jpg" alt="Lizard" style="width:100%">Leopard Gecko<br>$40</a>
+            		        </div>
+            	        </div>
+            	        <div class="column">
+            		        <div class="pets">
+            			        <a href="#turtle"><img src="../HTML/Images/turtle.jpg" alt="Turtle" style="width:100%">Turtle<br>$20</a>
+            		        </div>
+            	        </div>
+                    </div>
+
+                    <!--Food-->
+                    <section class="title">
+                      	<h2>Food</h2>
+                      	<hr style="width: 98%;">
+                    </section>
+
+                    <div class="row">
+                    	<div class="column-more-content">
+                    		<div class="more-content">
+                	            <a href="#cat-food"><img src="../HTML/Images/cat-food-wet.jpg" alt="Cat food" style="width:100%">Wet Cat Food 0.2kg<br>$5</a>
+                            </div>
+                    	</div>
+                    	<div class="column-more-content">
+                    		<div class="more-content">
+            		            <a href="#dog-food"><img src="../HTML/Images/dog-food.jpg" alt="Dog food" style="width:100%">Dry Dog Food 15kg<br>$70</a>
+            	            </div>
+                    	</div>
+                    	<div class="column-more-content">
+                    		<div class="more-content">
+            		           <a href="#cat-food"><img src="../HTML/Images/cat-food.jpg" alt="Cat food" style="width:100%">Dry Cat Food 15kg<br>$85</a>
+            	            </div>
+                    	</div>
+                    	<div class="column-more-content">
+                    		<div class="more-content">
+            	                <a href="#dog-food"><img src="../HTML/Images/dog-food-wet.jpg" alt="Dog food" style="width:100%">Wet Dog Food 0.2kg<br>$6</a>
+                            </div>
+                    	</div>
+                    	<div class="column-more-content">
+                    		<div class="more-content">
+            	                <a href="#cat-food"><img src="../HTML/Images/cat-canned-food.jpg" alt="Cat food" style="width:100%">Cat Canned Food<br>$12</a>
+                            </div>
+                    	</div>
+                    	<div class="column-more-content">
+                    		<div class="more-content">
+            	                <a href="#dog-food"><img src="../HTML/Images/puppy-food.jpg" alt="Dog food" style="width:100%">Puppy Food 10kg<br>$55</a>
+                            </div>
+                    	</div>
+                    	<div class="column-more-content">
+                    		<div class="more-content">
+            	                <a href="#dog-food"><img src="../HTML/Images/dog-canned-food.jpg" alt="Dog food" style="width:100%">Dog Canned Food<br>$15</a>
+                            </div>
+                    	</div>
+                    	<div class="column-more-content">
+                    		<div class="more-content">
+            	                <a href="#dog-food"><img src="../HTML/Images/kitten-food.jpg" alt="Cat food" style="width:100%">Kitten Food 10kg<br>$75</a>
+                            </div>
+                    	</div>
+                    </div>
+	    		</div>
+
+	    		<!--Column Right-->
+	    		<div class="column-right">
+	    		    <div class="menu">
+	    		    	<h3>Pet Promotions</h3>
+	    		    	<ul>
+	    		    		<li><a href="#cats">Cats</a></li>
+	    		    		<li><a href="#dogs">Dogs</a></li>
+	    		    		<li><a href="#rabbits">Rabbits</a></li>
+	    		    		<li><a href="#birds">Birds</a></li>
+	    		    		<li><a href="#fish">Fish</a></li>
+	    		    		<li><a href="#reptiles">Reptiles</a></li>
+	    		    	</ul>
+	    		    </div>
+
+	    		    <div class="menu">
+	    		    	<h3>Pet Care</h3>
+	    		    	<ul>
+	    		    		<li><a href="#pets">Our Vet center</a></li>
+	    		    		<li><a href="#pets">All pets care</a></li>
+	    		    		<li><a href="#pets">About Pet adoption</a></li>
+	    		    		<li><a href="#rabbits">Shelters and Rescues</a></li>
+	    		    		<li><a href="#">Local Adoption events</a></li>
+	    		    	</ul>
+	    		    </div>
+
+	    		    <div class="menu">
+	    		    	<h3>Food</h3>
+	    		    	<ul>
+	    		    		<li><a href="#food">Premium and Super Premium Brands</a></li>
+	    		    		<li><a href="#cats">Cats</a></li>
+	    		    		<li><a href="#dogs">Dogs</a></li>
+	    		    		<li><a href="#rabbits">Rabbits</a></li>
+	    		    		<li><a href="#birds">Birds</a></li>
+	    		    		<li><a href="#fish">Fish</a></li>
+	    		    		<li><a href="#reptiles">Reptiles</a></li>
+	    		    	</ul>
+	    		    </div>
+
+	    		    <div class="menu">
+	    		    	<h3>Shop Locations</h3>
+	    		    	<ul>
+	    		    		<li><a href="#">Sofia, Bulgaria</a></li>
+	    		    		<li><a href="#">London, UK</a></li>
+	    		    		<li><a href="#">Berlin, Germany</a></li>
+	    		    		<li><a href="#">Nice, France</a></li>
+	    		    		<li><a href="#">Rome, Italy</a></li>
+	    		    	</ul>
+	    		    </div>
+
+	    		</div>
+	    	</div>
+
+	    	<!--Footer-->
+			<footer id="footer-container">
+				<div class="footer-background">
+					<div class="footer-content-area">
+						<div class="footer-content">
+							<div class="footer_logo">
+								<a href="#logo"><h4>PetShop<i class="fa fa-paw"></i></h4></a>
+							</div>
+							<div class="footer">
+								<div class="footer-row">
+									<div class="footer-column">
+										<h4>Our Products</h4>
+										<ul>
+											<li><a href="#pets">Pets</a></li>
+											<li><a href="#food">Food</a></li>
+											<li><a href="#vetcare">Vet Care</a></li>
+											<li><a href="#toys">Pet Toys</a></li>
+											<li><a href="#">Gift cards</a></li>
+										</ul>
+									</div>
+									<div class="footer-column">
+										<h4>About us</h4>
+										<ul>
+											<li><a href="#news">News</a></li>
+											<li><a href="#">Locations</a></li>
+											<li><a href="#">History</a></li>
+											<li><a href="#">Our Policy</a></li>
+											<li><a href="#">FAQ</a></li>
+										</ul>
+									</div>
+									<div class="footer-column">
+										<h4>Contact us</h4>
+                                        <ul>
+                                            <li><a href="#">+365 00 0000000</a></li>
+                                            <li><a href="#">mountain@gmail.com</a></li>
+                                            <li><a href="#"><i class="fa fa-facebook"></i><i class="fa fa-instagram"></i><i class="fa fa-twitter"></i></a></li>
+                                        </ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p>Copyright ©2021 PetShop. Design By Jasmine Yabari</p>
+			</footer>
+	    </section>
+	</section>
+</body>
+</html>
