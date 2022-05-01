@@ -1,0 +1,8 @@
+ Write a countdown alarm program that uses delegates to notify anyone who is interested 
+that the designated amount of time has passed. You’ll need a class to simulate the countdown 
+clock that accepts a message and a number of seconds to wait (supplied by the user). After 
+waiting the appropriate amount of time, the countdown clock should call the delegate and pass 
+the message to any registered observers. (When you’re calculating the time to wait, remember that 
+Thread.Sleep( ) takes an argument in milliseconds, and requires a using System.Threading statement.) 
+tCreate an observer class as well that echoes the received message to the console.
+
