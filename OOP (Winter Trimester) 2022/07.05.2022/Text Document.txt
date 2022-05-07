@@ -1,0 +1,30 @@
+Моделирайте следното:
+1) Motor Vehicle
+a) Power
+b) Maximum passengers
+c) Maximum cargo weight
+2) Van
+a) Power
+b) Maximum passengers
+c) Maximum cargo weight
+3) Car
+a) Power
+b) Maximum passengers
+c) Maximum cargo weight
+4) Bus
+a) Power
+b) Maximum passengers
+c) Maximum cargo weight
+5) Autopark
+a) Vehicles
+6) Public Transportation Autopark
+a) Vehicles
+b) Maximum passengers
+7) Logistics Autopark
+a) Vehicles
+b) Maximum cargo weight
+Трябва да използвате подходящи типове за данните и да проектирате класовете по такъв начин,
+че програмист да може да създаде масив от инстанции на автопаркове и да отпечата броя МПС
+във всеки, за парковете за публичен транспорт – максималният капацитет пътници, а за парковете
+за логистика – максималното тегло товар. Трябва да използвате добри ОО практики като
+капсулация, наследяване и да дефинирате адекватни връзки между класовете.
