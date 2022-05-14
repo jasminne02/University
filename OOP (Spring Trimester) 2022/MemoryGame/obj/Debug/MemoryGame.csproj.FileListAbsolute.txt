@@ -1,0 +1,13 @@
+C:\Visual Studio Projects\C#\MemoryGame\bin\Debug\MemoryGame.exe.config
+C:\Visual Studio Projects\C#\MemoryGame\bin\Debug\MemoryGame.exe
+C:\Visual Studio Projects\C#\MemoryGame\bin\Debug\MemoryGame.pdb
+C:\Visual Studio Projects\C#\MemoryGame\obj\Debug\MemoryGame.csproj.AssemblyReference.cache
+C:\Visual Studio Projects\C#\MemoryGame\obj\Debug\MemoryGame.csproj.SuggestedBindingRedirects.cache
+C:\Visual Studio Projects\C#\MemoryGame\obj\Debug\MemoryGame.ColorGameForm.resources
+C:\Visual Studio Projects\C#\MemoryGame\obj\Debug\MemoryGame.MainForm.resources
+C:\Visual Studio Projects\C#\MemoryGame\obj\Debug\MemoryGame.Properties.Resources.resources
+C:\Visual Studio Projects\C#\MemoryGame\obj\Debug\MemoryGame.csproj.GenerateResource.cache
+C:\Visual Studio Projects\C#\MemoryGame\obj\Debug\MemoryGame.csproj.CoreCompileInputs.cache
+C:\Visual Studio Projects\C#\MemoryGame\obj\Debug\MemoryGame.exe
+C:\Visual Studio Projects\C#\MemoryGame\obj\Debug\MemoryGame.pdb
+C:\Visual Studio Projects\C#\MemoryGame\obj\Debug\MemoryGame.PicGameForm.resources
