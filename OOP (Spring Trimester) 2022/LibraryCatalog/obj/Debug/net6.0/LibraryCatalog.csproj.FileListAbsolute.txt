@@ -1,0 +1,15 @@
+C:\Visual Studio Projects\C#\LibraryCatalog\bin\Debug\net6.0\LibraryCatalog.exe
+C:\Visual Studio Projects\C#\LibraryCatalog\bin\Debug\net6.0\LibraryCatalog.deps.json
+C:\Visual Studio Projects\C#\LibraryCatalog\bin\Debug\net6.0\LibraryCatalog.runtimeconfig.json
+C:\Visual Studio Projects\C#\LibraryCatalog\bin\Debug\net6.0\LibraryCatalog.dll
+C:\Visual Studio Projects\C#\LibraryCatalog\bin\Debug\net6.0\LibraryCatalog.pdb
+C:\Visual Studio Projects\C#\LibraryCatalog\obj\Debug\net6.0\LibraryCatalog.csproj.AssemblyReference.cache
+C:\Visual Studio Projects\C#\LibraryCatalog\obj\Debug\net6.0\LibraryCatalog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Visual Studio Projects\C#\LibraryCatalog\obj\Debug\net6.0\LibraryCatalog.AssemblyInfoInputs.cache
+C:\Visual Studio Projects\C#\LibraryCatalog\obj\Debug\net6.0\LibraryCatalog.AssemblyInfo.cs
+C:\Visual Studio Projects\C#\LibraryCatalog\obj\Debug\net6.0\LibraryCatalog.csproj.CoreCompileInputs.cache
+C:\Visual Studio Projects\C#\LibraryCatalog\obj\Debug\net6.0\LibraryCatalog.dll
+C:\Visual Studio Projects\C#\LibraryCatalog\obj\Debug\net6.0\refint\LibraryCatalog.dll
+C:\Visual Studio Projects\C#\LibraryCatalog\obj\Debug\net6.0\LibraryCatalog.pdb
+C:\Visual Studio Projects\C#\LibraryCatalog\obj\Debug\net6.0\LibraryCatalog.genruntimeconfig.cache
+C:\Visual Studio Projects\C#\LibraryCatalog\obj\Debug\net6.0\ref\LibraryCatalog.dll
