@@ -1,0 +1,15 @@
+C:\Visual Studio Projects\C#\School\bin\Debug\net6.0\School.exe
+C:\Visual Studio Projects\C#\School\bin\Debug\net6.0\School.deps.json
+C:\Visual Studio Projects\C#\School\bin\Debug\net6.0\School.runtimeconfig.json
+C:\Visual Studio Projects\C#\School\bin\Debug\net6.0\School.dll
+C:\Visual Studio Projects\C#\School\bin\Debug\net6.0\School.pdb
+C:\Visual Studio Projects\C#\School\obj\Debug\net6.0\School.csproj.AssemblyReference.cache
+C:\Visual Studio Projects\C#\School\obj\Debug\net6.0\School.GeneratedMSBuildEditorConfig.editorconfig
+C:\Visual Studio Projects\C#\School\obj\Debug\net6.0\School.AssemblyInfoInputs.cache
+C:\Visual Studio Projects\C#\School\obj\Debug\net6.0\School.AssemblyInfo.cs
+C:\Visual Studio Projects\C#\School\obj\Debug\net6.0\School.csproj.CoreCompileInputs.cache
+C:\Visual Studio Projects\C#\School\obj\Debug\net6.0\School.dll
+C:\Visual Studio Projects\C#\School\obj\Debug\net6.0\refint\School.dll
+C:\Visual Studio Projects\C#\School\obj\Debug\net6.0\School.pdb
+C:\Visual Studio Projects\C#\School\obj\Debug\net6.0\School.genruntimeconfig.cache
+C:\Visual Studio Projects\C#\School\obj\Debug\net6.0\ref\School.dll
