@@ -1,0 +1,15 @@
+C:\Visual Studio Projects\C#\Shop\bin\Debug\net6.0\Shop.exe
+C:\Visual Studio Projects\C#\Shop\bin\Debug\net6.0\Shop.deps.json
+C:\Visual Studio Projects\C#\Shop\bin\Debug\net6.0\Shop.runtimeconfig.json
+C:\Visual Studio Projects\C#\Shop\bin\Debug\net6.0\Shop.dll
+C:\Visual Studio Projects\C#\Shop\bin\Debug\net6.0\Shop.pdb
+C:\Visual Studio Projects\C#\Shop\obj\Debug\net6.0\Shop.csproj.AssemblyReference.cache
+C:\Visual Studio Projects\C#\Shop\obj\Debug\net6.0\Shop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Visual Studio Projects\C#\Shop\obj\Debug\net6.0\Shop.AssemblyInfoInputs.cache
+C:\Visual Studio Projects\C#\Shop\obj\Debug\net6.0\Shop.AssemblyInfo.cs
+C:\Visual Studio Projects\C#\Shop\obj\Debug\net6.0\Shop.csproj.CoreCompileInputs.cache
+C:\Visual Studio Projects\C#\Shop\obj\Debug\net6.0\Shop.dll
+C:\Visual Studio Projects\C#\Shop\obj\Debug\net6.0\refint\Shop.dll
+C:\Visual Studio Projects\C#\Shop\obj\Debug\net6.0\Shop.pdb
+C:\Visual Studio Projects\C#\Shop\obj\Debug\net6.0\Shop.genruntimeconfig.cache
+C:\Visual Studio Projects\C#\Shop\obj\Debug\net6.0\ref\Shop.dll
