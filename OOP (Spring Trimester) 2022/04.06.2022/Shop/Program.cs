@@ -145,9 +145,12 @@ namespace Shop
                                     break;
                                 case 2:
                                     product = ChooseProduct(currentProducts);
-                                    Console.WriteLine("How many stock u want to add? ");
-                                    command = int.Parse(Console.ReadLine());
-                                    product.AddStockToAProduct(command);
+                                    if(currentProducts.Count > 0)
+                                    {
+                                        Console.WriteLine("How many stock u want to add? ");
+                                        command = int.Parse(Console.ReadLine());
+                                        product.AddStockToAProduct(command);
+                                    }
                                     command = -1;
                                     break;
                                 case 3:
