@@ -1,0 +1,15 @@
+C:\Visual Studio Projects\C#\ExamExcercises\bin\Debug\net6.0\ExamExcercises.exe
+C:\Visual Studio Projects\C#\ExamExcercises\bin\Debug\net6.0\ExamExcercises.deps.json
+C:\Visual Studio Projects\C#\ExamExcercises\bin\Debug\net6.0\ExamExcercises.runtimeconfig.json
+C:\Visual Studio Projects\C#\ExamExcercises\bin\Debug\net6.0\ExamExcercises.dll
+C:\Visual Studio Projects\C#\ExamExcercises\bin\Debug\net6.0\ExamExcercises.pdb
+C:\Visual Studio Projects\C#\ExamExcercises\obj\Debug\net6.0\ExamExcercises.csproj.AssemblyReference.cache
+C:\Visual Studio Projects\C#\ExamExcercises\obj\Debug\net6.0\ExamExcercises.GeneratedMSBuildEditorConfig.editorconfig
+C:\Visual Studio Projects\C#\ExamExcercises\obj\Debug\net6.0\ExamExcercises.AssemblyInfoInputs.cache
+C:\Visual Studio Projects\C#\ExamExcercises\obj\Debug\net6.0\ExamExcercises.AssemblyInfo.cs
+C:\Visual Studio Projects\C#\ExamExcercises\obj\Debug\net6.0\ExamExcercises.csproj.CoreCompileInputs.cache
+C:\Visual Studio Projects\C#\ExamExcercises\obj\Debug\net6.0\ExamExcercises.dll
+C:\Visual Studio Projects\C#\ExamExcercises\obj\Debug\net6.0\refint\ExamExcercises.dll
+C:\Visual Studio Projects\C#\ExamExcercises\obj\Debug\net6.0\ExamExcercises.pdb
+C:\Visual Studio Projects\C#\ExamExcercises\obj\Debug\net6.0\ExamExcercises.genruntimeconfig.cache
+C:\Visual Studio Projects\C#\ExamExcercises\obj\Debug\net6.0\ref\ExamExcercises.dll
