@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My App</string>
+    <string name="result_textview">Result:</string>
+    <string name="plus_button">+</string>
+    <string name="minus_button">-</string>
+    <string name="multiply_button">*</string>
+    <string name="div_button">/</string>
+</resources>
