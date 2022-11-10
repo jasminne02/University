@@ -105,7 +105,7 @@ GROUP BY FNAME, LNAME
 SELECT *
 FROM MANAGER_VIEW
 
-
+	
 /*Създайте изглед, който съдържа наименованията на длъжностите и датите на 
 първия и последния назначен служител в тази длъжност*/
 CREATE VIEW JOB_VIEW
@@ -143,3 +143,24 @@ GROUP BY E.EMPLOYEE_ID, NAME
 
 SELECT *
 FROM DEP_EML_ORD_VIEW
+
+
+
+
+
+
+
+
+/*Създайте изглед с имената на държавите и съответния брой отдели в 
+тях. Сортирайте спрямо броя на отделите низходящо.*/
+
+CREATE VIEW COUNTRIES_NAMES AS
+SELECT COUNTRIES.NAME, COUNT(DEPARTMENTS.DEPARTMENT_ID) AS departments_count
+FROM COUNTRIES 
+LEFT JOIN DEPARTMENTS ON DEPARTMENTS.COUNTRY_ID = COUNTRIES.COUNTRY_ID
+GROUP BY COUNTRIES.NAME
+
+SELECT *
+FROM COUNTRIES_NAMES
+ORDER BY departments_count DESC
+
