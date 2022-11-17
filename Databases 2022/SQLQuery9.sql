@@ -138,3 +138,45 @@ SELECT NAME, FNAME + ' ' + LNAME AS MANAGER
 FROM DEPARTMENTS D JOIN EMPLOYEES E 
 ON D.MANAGER_ID = E.EMPLOYEE_ID
 ORDER BY NAME
+
+
+
+/*Да се създаде транзакция, която:
+
+- добавя нов служител с идентификатор 300;
+- после променя фамилията на клиент с идентификатор 111 на 'Маринова'; 
+- и след това добавя нова поръчка в таблица ORDERS, в която участват горепосочените идентификатори на служител и клиент;
+- нека след това извлече в резултат добавения запис в таблица ORDERS. 
+
+A промените от транзакцията останат постоянни!*/
+
+
+BEGIN TRANSACTION
+
+
+INSERT EMPLOYEES
+VALUES (300, 'New', 'Employee', 'employee@mail.com', NULL, convert(datetime, '17-11-2022', 105), 20000, 'IT_PROG', 100, 90)
+
+UPDATE CUSTOMERS
+SET FNAME = 'Маринова'
+WHERE CUSTOMER_ID = 111
+
+INSERT ORDERS
+VALUES (1000, convert(datetime, '17-11-2022', 105), 111, 300, NULL)
+
+
+SELECT * FROM ORDERS
+WHERE EMPLOYEE_ID = 300 AND CUSTOMER_ID = 111 
+
+COMMIT
+
+
+DELETE
+FROM EMPLOYEES
+WHERE EMPLOYEE_ID = 300
+
+DELETE FROM ORDERS
+WHERE ORDER_ID = 1000
+
+SELECT * FROM ORDERS
+
