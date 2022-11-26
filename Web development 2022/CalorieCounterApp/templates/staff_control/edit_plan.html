@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filter %}
+
+{% block content %}
+    <main class="main-food-add">
+        <div class="center">
+            <div class="container">
+                <div class="text">
+                    Edit Form
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="data">
+                        <label>
+                            <input disabled value="{{ plan.name }}">
+                        </label>
+                    </div>
+                    <div class="data">
+                        {{ form.image_url|placeholder:'Image URL' }}
+                    </div>
+                    <div class="data">
+                        {{ form.meals|placeholder:'Meals' }}
+                    </div>
+                    <div class="data">
+                        {{ form.food|placeholder:'Food' }}
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">Edit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

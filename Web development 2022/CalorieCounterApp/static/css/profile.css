@@ -1,0 +1,78 @@
+.main-profile-details{
+    margin-top: 5em;
+    margin-bottom: 3em;
+    height: 37em;
+}
+
+.main-profile-delete{
+    margin-top: 10em;
+    height: 27.5em;
+}
+
+.profile-info{
+    width: 55%;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 3em;
+    background-color: #94c36534;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile-delete{
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+    padding: 3em 0 3em 3em;
+    background-color: #94c36530;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile-img {
+    width: 35%;
+    position: relative;
+    float: left;
+    margin-left: 15px;
+    margin-right: 55px;
+    height: 17em;
+    border-radius: 50%;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+.buttons {
+    height: 10%;
+    text-align: right;
+    padding-right: 15px;
+    padding-bottom: 40px;
+}
+
+.logout-button, .edit-button, .delete-button {
+    height: 15%;
+    padding: 14px;
+    margin-top: auto;
+    font-size: 21px;
+    border-radius: 3px;
+    background-color: #ffe15ba7;
+    text-decoration: none;
+    color: #197448;
+}
+
+.logout-button:hover, .edit-button:hover, .delete-button:hover {
+    cursor: pointer;
+    background-color: #ffe15bfa;
+}
+
+.delete-button-yes{
+    height: 15%;
+    padding: 0.5em;
+    margin-top: auto;
+    font-size: 21px;
+    background-color: #ffe15ba7;
+    text-decoration: none;
+    color: #197448;
+    border: none;
+    border-radius: 5px;
+    margin-left: 45%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

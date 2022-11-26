@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="control-main">
+        <div class="control">
+            <div id="text">
+                <h1>Staff Control</h1>
+            </div>
+            <h1>Food</h1>
+            <p><a href="add-food/">Add food</a></p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Grams</th>
+                    <th>Calories</th>
+                    <th>Fats</th>
+                    <th>Protein</th>
+                    <th>Carbs</th>
+                </tr>
+                {% for food in foods %}
+                    <tr>
+                        <td>{{ food.name }}</td>
+                        <td>100g</td>
+                        <td>{{ food.calories_per_100g }}</td>
+                        <td>{{ food.fats_per_100g }}</td>
+                        <td>{{ food.protein_per_100g }}</td>
+                        <td>{{ food.carbs_per_100g }}</td>
+                        <td><a href="edit-food/{{ food.id }}">edit</a></td>
+                        <td><a href="delete-food/{{ food.id }}">delete</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="control">
+            <h1>Meals</h1>
+            <p><a href="add-meal/">Add meal</a></p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Grams</th>
+                    <th>Calories</th>
+                    <th>Fats</th>
+                    <th>Protein</th>
+                    <th>Carbs</th>
+                </tr>
+                {% for meal in meals %}
+                    <tr>
+                        <td>{{ meal.name }}</td>
+                        <td>{{ meal.grams }}</td>
+                        <td>{{ meal.calories }}</td>
+                        <td>{{ meal.fats_grams }}</td>
+                        <td>{{ meal.protein_grams }}</td>
+                        <td>{{ meal.carbs_grams }}</td>
+                        <td><a href="edit-meal/{{ meal.id }}">edit</a></td>
+                        <td><a href="delete-meal/{{ meal.id }}">delete</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="control">
+            <h1>Food Plans</h1>
+            <p><a href="add-plan/">Add food plan</a></p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Calories</th>
+                    <th>Grams</th>
+                    <th>Fats</th>
+                    <th>Protein</th>
+                    <th>Carbs</th>
+                </tr>
+                {% for plan in food_plans %}
+                    <tr>
+                        <td>{{ plan.name }}</td>
+                        <td>{{ plan.calories }}</td>
+                        <td>{{ plan.grams }}</td>
+                        <td>{{ plan.fats_grams }}</td>
+                        <td>{{ plan.protein_grams }}</td>
+                        <td>{{ plan.carbs_grams }}</td>
+                        <td><a href="edit-plan/{{ plan.id }}">edit</a></td>
+                        <td><a href="delete-plan/{{ plan.id }}">delete</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="control">
+            <h1>Exercise</h1>
+            <p><a href="add-exercise/">Add exercise</a></p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Metabolic Equivalent</th>
+                </tr>
+                {% for exercise in exercises %}
+                    <tr>
+                        <td>{{ exercise.name }}</td>
+                        <td>{{ exercise.metabolic_equivalent }}</td>
+                        <td><a href="edit-exercise/{{ exercise.id }}">edit</a></td>
+                        <td><a href="delete-exercise/{{ exercise.id }}">delete</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="control">
+            <h1>Motivations</h1>
+            <p><a href="add-motivation/">Add motivation</a></p>
+            <table>
+                <tr>
+                    <th>Quote</th>
+                    <th>Description</th>
+                </tr>
+                {% for motivation in motivations %}
+                    <tr>
+                        <td>{{ motivation.quote }}</td>
+                        <td>{{ motivation.description }}</td>
+                        <td><a href="edit-motivation/{{ motivation.id }}">edit</a></td>
+                        <td><a href="delete-motivation/{{ motivation.id }}">delete</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

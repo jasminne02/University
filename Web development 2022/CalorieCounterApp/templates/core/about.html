@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="about-content">
+        <div class="info">
+            <h1>Calorie Counter</h1>
+            <h3>The place where you keep track of your health</h3>
+            <p>You can log your meals and Calorie Counter will keep track of your eating habits. When you register to
+                the web app it calculates the calories your
+                body needs for the day. Each day you should log the food you have eaten. You can choose from our Food
+                Plans what to eat for the day to reach the calorie
+                goal. You are also able to track your burnt calories by logging your activities, they will be added to
+                your total calories if you want so. Calorie Counter makes statistics
+                based on your calorie intake and the level of your activity. You are able to check them and better your
+                health.
+            </p>
+        </div>
+        <div class="content-image">
+            <img src="{% static '/images/food.jpg' %}" alt="food">
+        </div>
+        <div class="info" id="cards">
+            <h1>Mind Your Health</h1>
+            <div class="box">
+                <h3>Vitamins have different jobs to help keep the body working properly.</h3>
+                <div id="image"><img src="{% static '/images/vitamins.jpg' %}" alt="get active"></div>
+            </div>
+            <div class="box">
+                <h3>Physical activity is one of the most important keys to a healthy body.</h3>
+                <div id="image"><img src="{% static '/images/get_active.jpg' %}" alt="get active"></div>
+            </div>
+            <div class="box">
+                <h3>A balanced diet should include at least 5 portions of fruit and veg a day.</h3>
+                <div id="image"><img src="{% static '/images/heart.jpg' %}" alt="get active"></div>
+            </div>
+        </div>
+        <div class="content-image">
+            <img src="{% static '/images/food.jpg' %}" alt="food">
+        </div>
+        <div class="info">
+            <h1>Counting Calories</h1>
+            <h3>Why should I count my calories?</h3>
+            <p> Calorie counting can be educational. Calorie counting forces us to more closely monitor what we put in
+                our mouths. It can be a very eye-opening
+                exercise and help people become more mindful when it comes to eating. It can help people understand
+                exactly how to portion their food in a new way by actually learning
+                how much energy is in the food they consume. It gets people to turn over their food packages.
+            </p>
+            <p>
+                Calories are the easiest number to see on the label
+                and can lead to learning about the other nutrients as well. It helps you eliminate excess calories,
+                which are what always lead to weight gain.
+                The only way to lose weight is to eat fewer calories than you burn, and calorie counting helps you track
+                those numbers.
+            </p>
+        </div>
+    </main>
+{% endblock %}

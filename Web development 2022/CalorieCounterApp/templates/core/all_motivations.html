@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="motivations-content">
+        {% for motivation in object_list %}
+            <div class="content">
+                <h2>{{ motivation.quote }}</h2>
+                <p>{{ motivation.description }}</p>
+            </div>
+            <div class="content-image">
+                <img src="{% static '/images/food.jpg' %}" alt="food">
+            </div>
+        {% endfor %}
+    </main>
+{% endblock %}

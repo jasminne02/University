@@ -1,0 +1,55 @@
+.control-main {
+    justify-content: center;
+    width: 90%;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.control-main #text{
+    font-size: 24px;
+    margin-left: 3em;
+    margin-bottom: 5em;
+}
+
+.control{
+    margin-left: 25%;
+    margin-right: 10%;
+    margin-bottom: 8em;
+}
+
+.control-main td, .control-main th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.control-main tr:nth-child(even){background-color: #f2f2f2;}
+
+.control-main tr:hover {background-color: #ddd;}
+
+.control-main th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ffe15bbb;
+}
+
+.control-main td a{
+    text-decoration: none;
+    background-color: #82bc47;
+    color: white;
+    padding: 0.3em;
+    border-radius: 5px;
+}
+
+.control-main td a:hover{
+    background-color: #76ab3e;
+}
+
+.main-food-add{
+    height:65em;
+}
+
+.main-food-add .container{
+    margin-top: 10em;
+    margin-bottom: 20em;
+}

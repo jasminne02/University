@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filter %}
+
+{% block content %}
+    <main class="main-add-food">
+        <div class="center">
+            <div class="container">
+                <div class="text">
+                    Add Activity
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="data">
+                        <label>
+                            <input type="text" value="{{ activity_name }}" disabled>
+                        </label>
+                    </div>
+                    <div class="data">
+                        {{ form.active_minutes|placeholder:'Activity duration' }}
+                    </div>
+                    <div id="check">
+                        Add burnt calories to total: {{ form.add_burnt_to_total }}
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

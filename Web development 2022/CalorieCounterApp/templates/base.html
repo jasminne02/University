@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" href="{% static 'images/diet.png' %}" type="image/icon type">
+
+    <!--Chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+    <title>Calorie Counter</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+
+<body>
+<div class="main-container">
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <a href="{% url 'home' %}" id="title">Calorie Counter</a>
+            <img src="{% static 'images/diet.png' %}" alt="diet">
+            <ul>
+                {% if not request.user.is_authenticated %}
+                    <li><a href="{% url 'food plans' %}">Food Plans</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <!--Only for not log in user-->
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                {% else %}
+                    <!--Only for user with created profile-->
+                    <li><a href="{% url 'calorie counter' %}">Your Calories</a></li>
+                    <li><a href="{% url 'food plans' %}">Food Plans</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <!--Only for user with created profile-->
+                    <li><a href="{% url 'profile details' username=user.username %}">Profile</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <!-- End Navigation Bar -->
+
+    <!-- Main Content -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            &copy;Calorie Counter | Jasmine Y.
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filter %}
+
+{% block content %}
+    <main class="main-add-food">
+        <div class="center">
+            <div class="container">
+                <div class="text">
+                    Add Food
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="data">
+                        <label>
+                            <input type="text" value="{{ food_name }}" disabled>
+                        </label>
+                    </div>
+                    <div class="data">
+                        {{ form.grams|placeholder:'Food quantity in grams' }}
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

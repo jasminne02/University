@@ -1,0 +1,296 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filter %}
+
+{% block content %}
+    <main class="main-calorie-counter">
+        <h1 id="calorie-title">Today's info</h1>
+        <section class="today">
+            {% if left_calories > 0 %}
+                <div class="circle-green">
+                    <h1>{{ left_calories }}cal left</h1>
+                </div>
+            {% else %}
+                <div class="circle-red">
+                    <h1>No cal left</h1>
+                </div>
+            {% endif %}
+            <div class="today-info">
+                <h3>{{ daily_data.calories_eaten }}cal / {{ daily_data.total_calories }}cal</h3>
+                {% if daily_data.calories_burnt %}
+                    <p>Burnt: {{ daily_data.calories_burnt|floatformat:0 }}cal</p>
+                {% else %}
+                    <p>Burnt: 0cal</p>
+                {% endif %}
+                {% if daily_data.carbs_grams_per_day %}
+                    <p>Carbs: {{ daily_data.carbs_grams_per_day|floatformat:0 }}g
+                        / {{ user.carbs_grams_per_day|floatformat:0 }}g</p>
+                    <p>
+                        Protein: {{ daily_data.proteins_grams_per_day|floatformat:0 }}g/ {{ user.proteins_grams_per_day|floatformat:0 }}g</p>
+                    <p>Fat: {{ daily_data.fats_grams_per_day|floatformat:0 }}g
+                        / {{ user.fats_grams_per_day|floatformat:0 }}g</p>
+                {% else %}
+                    <p>Carbs: 0g
+                        / {{ user.carbs_grams_per_day|floatformat:0 }}g</p>
+                    <p>
+                        Protein: 0g/ {{ user.proteins_grams_per_day|floatformat:0 }}g</p>
+                    <p>Fat: 0g
+                        / {{ user.fats_grams_per_day|floatformat:0 }}g</p>
+                {% endif %}
+            </div>
+            <a id="details" href="{% url 'today details' %}">Details</a>
+        </section>
+        <div class="row">
+            <section class="search">
+                <div class="search-container">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ food_search_form.name|placeholder:'Search Food..' }}
+                        <button type="submit" name="search-food">Search</button>
+                    </form>
+                    <div id="info">
+                        {% if food_searched_object == 'No search results' %}
+                            <h3>No search results</h3>
+                        {% elif food_searched_object %}
+                            <h3>{{ food_searched_object.name }}</h3>
+                            <p>{{ food_searched_object.calories|floatformat:0 }}cal
+                                per {{ food_searched_object.grams|floatformat:0 }}grams</p>
+                            <p>{{ food_searched_object.carbs_grams|floatformat:1 }}gr. carbs</p>
+                            <p>{{ food_searched_object.protein_grams|floatformat:1 }}gr. protein</p>
+                            <p>{{ food_searched_object.fats_grams|floatformat:1 }}gr fats</p>
+                        {% else %}
+                            <div id="blank-info"></div>
+                            <div id="blank-info"></div>
+                            <div id="blank-info"></div>
+                        {% endif %}
+                    </div>
+                    {% if food_searched_object and food_searched_object != 'No search results' %}
+                        <a href="{% url 'add food' name=food_searched_object.name %}">Calculate</a>
+                    {% endif %}
+                </div>
+            </section>
+            <section class="search">
+                <div class="search-container">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ activity_search_form.name|placeholder:'Search Activity..' }}
+                        <button type="submit" name="search-activity">Search</button>
+                    </form>
+                    <div id="info-activity">
+                        {% if activity_searched_object == 'No search results' %}
+                            <h1>No search results</h1>
+                        {% elif activity_searched_object %}
+                            <h3>{{ activity_searched_object.name }}</h3>
+                            <p>Metabolic equivalent: {{ activity_searched_object.metabolic_equivalent }}</p>
+                        {% else %}
+                            <div id="blank-info"></div>
+                            <div id="blank-info"></div>
+                        {% endif %}
+                    </div>
+                    {% if activity_searched_object and activity_searched_object != 'No search results' %}
+                        <a href="{% url 'add activity' pk=activity_searched_object.pk %}">Calculate</a>
+                    {% endif %}
+                </div>
+            </section>
+        </div>
+        <h1 id="calorie-title"> Weekly Stats</h1>
+        <section class="row2">
+            <div class="stats">
+                <h1>Calories</h1>
+                <div id="stats-info">
+                    <canvas id="myChart1" width="450" height="400"></canvas>
+                    <script>
+                        const ctx1 = document.getElementById('myChart1').getContext('2d');
+                        const myChart1 = new Chart(ctx1, {
+                            type: 'bar',
+                            data: {
+                                labels: [{% for data in weekly_data %} '{{ data.date }}', {% endfor %}],
+                                datasets: [{
+                                    label: 'Calories eaten',
+                                    data: [{% for data in weekly_data %} '{{ data.calories_eaten }}', {% endfor %}],
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.8)',
+                                        'rgba(54, 162, 235, 0.8)',
+                                        'rgba(255, 206, 86, 0.8)',
+                                        'rgba(75, 192, 192, 0.8)',
+                                        'rgba(153, 102, 255, 0.8)',
+                                        'rgba(255, 159, 64, 0.8)'
+                                    ],
+                                    borderColor: [
+                                        'rgba(255, 99, 132, 1)',
+                                        'rgba(54, 162, 235, 1)',
+                                        'rgba(255, 206, 86, 1)',
+                                        'rgba(75, 192, 192, 1)',
+                                        'rgba(153, 102, 255, 1)',
+                                        'rgba(255, 159, 64, 1)'
+                                    ],
+                                    borderWidth: 1
+                                },
+                                {
+                                    label: 'Healthy calorie intake',
+                                    data: [{% for data in weekly_data %} '{{ data.total_calories }}', {% endfor %}],
+                                    type: 'line',
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.8)',
+                                        'rgba(54, 162, 235, 0.8)',
+                                        'rgba(255, 206, 86, 0.8)',
+                                        'rgba(75, 192, 192, 0.8)',
+                                        'rgba(153, 102, 255, 0.8)',
+                                        'rgba(255, 159, 64, 0.8)'
+                                    ],
+                                    borderColor: [
+                                        'rgba(255, 99, 132, 1)',
+                                        'rgba(54, 162, 235, 1)',
+                                        'rgba(255, 206, 86, 1)',
+                                        'rgba(75, 192, 192, 1)',
+                                        'rgba(153, 102, 255, 1)',
+                                        'rgba(255, 159, 64, 1)'
+                                    ],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="stats">
+                <h1>Macronutrients</h1>
+                <div id="stats-info">
+                    <canvas id="myChart2" width="450" height="400"></canvas>
+                    <script>
+                        const ctx2 = document.getElementById('myChart2').getContext('2d');
+                        const myChart2 = new Chart(ctx2, {
+                            type: 'line',
+                            data: {
+                                labels: [{% for data in weekly_data %} '{{ data.date }}', {% endfor %}],
+                                datasets: [{
+                                    label: 'Carbs',
+                                    data: [
+                                        {% for data in weekly_data %} '{{ data.carbs_grams_per_day }}', {% endfor %}],
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.8)',
+                                        'rgba(54, 162, 235, 0.8)',
+                                        'rgba(255, 206, 86, 0.8)',
+                                        'rgba(75, 192, 192, 0.8)',
+                                        'rgba(153, 102, 255, 0.8)',
+                                        'rgba(255, 159, 64, 0.8)'
+                                    ],
+                                    borderColor: [
+                                        'rgba(255, 99, 132, 1)',
+                                        'rgba(54, 162, 235, 1)',
+                                        'rgba(255, 206, 86, 1)',
+                                        'rgba(75, 192, 192, 1)',
+                                        'rgba(153, 102, 255, 1)',
+                                        'rgba(255, 159, 64, 1)'
+                                    ],
+                                    borderWidth: 1
+                                },
+                                    {
+                                        label: 'Protein',
+                                        data: [
+                                            {% for data in weekly_data %} '{{ data.proteins_grams_per_day }}', {% endfor %}],
+                                        backgroundColor: [
+                                            'rgba(255, 99, 132, 0.8)',
+                                            'rgba(54, 162, 235, 0.8)',
+                                            'rgba(255, 206, 86, 0.8)',
+                                            'rgba(75, 192, 192, 0.8)',
+                                            'rgba(153, 102, 255, 0.8)',
+                                            'rgba(255, 159, 64, 0.8)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(255, 99, 132, 1)',
+                                            'rgba(54, 162, 235, 1)',
+                                            'rgba(255, 206, 86, 1)',
+                                            'rgba(75, 192, 192, 1)',
+                                            'rgba(153, 102, 255, 1)',
+                                            'rgba(255, 159, 64, 1)'
+                                        ],
+                                        borderWidth: 1
+                                    },
+                                    {
+                                        label: 'Fats',
+                                        data: [
+                                            {% for data in weekly_data %} '{{ data.fats_grams_per_day }}', {% endfor %}],
+                                        backgroundColor: [
+                                            'rgba(255, 99, 132, 0.8)',
+                                            'rgba(54, 162, 235, 0.8)',
+                                            'rgba(255, 206, 86, 0.8)',
+                                            'rgba(75, 192, 192, 0.8)',
+                                            'rgba(153, 102, 255, 0.8)',
+                                            'rgba(255, 159, 64, 0.8)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(255, 99, 132, 1)',
+                                            'rgba(54, 162, 235, 1)',
+                                            'rgba(255, 206, 86, 1)',
+                                            'rgba(75, 192, 192, 1)',
+                                            'rgba(153, 102, 255, 1)',
+                                            'rgba(255, 159, 64, 1)'
+                                        ],
+                                        borderWidth: 1
+                                    }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="stats">
+                <h1>Activity</h1>
+                <div id="stats-info">
+                    <canvas id="myChart3" width="450" height="400"></canvas>
+                    <script>
+                        const ctx3 = document.getElementById('myChart3').getContext('2d');
+                        const myChart3 = new Chart(ctx3, {
+                            type: 'bar',
+                            data: {
+                                labels: [{% for data in weekly_data %} '{{ data.date }}', {% endfor %}],
+                                datasets: [{
+                                    label: 'Burnt calories',
+                                    data: [{% for data in weekly_data %} '{{ data.calories_burnt }}', {% endfor %}],
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.8)',
+                                        'rgba(54, 162, 235, 0.8)',
+                                        'rgba(255, 206, 86, 0.8)',
+                                        'rgba(75, 192, 192, 0.8)',
+                                        'rgba(153, 102, 255, 0.8)',
+                                        'rgba(255, 159, 64, 0.8)'
+                                    ],
+                                    borderColor: [
+                                        'rgba(255, 99, 132, 1)',
+                                        'rgba(54, 162, 235, 1)',
+                                        'rgba(255, 206, 86, 1)',
+                                        'rgba(75, 192, 192, 1)',
+                                        'rgba(153, 102, 255, 1)',
+                                        'rgba(255, 159, 64, 1)'
+                                    ],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

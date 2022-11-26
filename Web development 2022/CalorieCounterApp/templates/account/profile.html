@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="main-profile-details">
+        <div class="profile-info">
+            {% if customuser.profile_image %}
+                <img class="profile-img" src="{{ customuser.profile_image }}" alt='image'/>
+            {% elif customuser.gender == 'Female' %}
+                <img class="profile-img" src="{% static 'images/woman.jpg' %}" alt='image'/>
+            {% elif customuser.gender == 'Male' %}
+                <img class="profile-img" src="{% static 'images/man.jpg' %}" alt='image'/>
+            {% endif %}
+            <h3>{{ customuser.username }}</h3>
+            <p>Age: {{ customuser.age }}</p>
+            <p>Date of birth: {{ customuser.birthday }}</p>
+            <p>Height: {{ customuser.height }}cm</p>
+            {% if customuser.weight %}
+                <p>Weight: {{ customuser.weight|floatformat:1 }}kg</p>
+            {% else %}
+                <p>Weight: No info</p>
+            {% endif %}
+            {% if customuser.motivations_group %}
+                <a href="{% url 'add motivation' %}">Motivations Group</a>
+            {% endif %}
+            <div class="buttons">
+                <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+                <a href="{% url 'profile edit' username=customuser.username %}" class="edit-button">Edit</a>
+                <a href="{% url 'profile delete' username=customuser.username %}" class="delete-button">Delete</a>
+            </div>
+        </div>
+    </main>
+{% endblock %}

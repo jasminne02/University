@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="main-profile-delete">
+        <div class="profile-delete">
+            <h1>Are you sure you want to delete your profile?</h1>
+            <form id='delete' method="post" action="{% url 'profile delete' username=customuser.username %}">
+                {% csrf_token %}
+                {{ form }}
+                <input class="delete-button-yes" type="submit" value="Yes">
+            </form>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filter %}
+
+{% block content %}
+    <main class="main-motivation-add">
+        <div class="center">
+            <div class="container">
+                <div class="text">
+                    Add Motivation Form
+                </div>
+                <form method="post" action="{% url 'add motivation' %}">
+                    {% csrf_token %}
+                    <div class="data">
+                        {{ form.quote|placeholder:'Main text' }}
+                    </div>
+                    <div class="data">
+                        {{ form.description|placeholder:'Description' }}
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

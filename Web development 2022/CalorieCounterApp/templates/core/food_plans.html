@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="main-food-plans">
+        <h1>Food Plans</h1>
+        <section class="main-section-plans">
+            {% if object_list %}
+                {% for plan in object_list %}
+                    <article id="plan">
+                        <img src="{{ plan.image_url }}" alt="food">
+                        <h3>{{ plan.name }}</h3>
+                        <p>Total: {{ plan.calories|floatformat:0 }}cal</p>
+                        <a href="{% url 'food plan details' pk=plan.pk %}">Details</a>
+                    </article>
+                {% endfor %}
+            {% else %}
+                <h1>No Food Plans!</h1>
+            {% endif %}
+        </section>
+    </main>
+{% endblock %}
+we

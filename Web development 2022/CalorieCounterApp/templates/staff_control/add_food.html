@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filter %}
+
+{% block content %}
+    <main class="main-food-add">
+        <div class="center">
+            <div class="container">
+                <div class="text">
+                    Add Food Form
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="data">
+                        {{ form.name|placeholder:'Name' }}
+                    </div>
+                    <div class="data">
+                        {{ form.calories_per_100g|placeholder:'Calories per 100g' }}
+                    </div>
+                    <div class="data">
+                        {{ form.fats_per_100g|placeholder:'Fats per 100g' }}
+                    </div>
+                    <div class="data">
+                        {{ form.protein_per_100g|placeholder:'Proteins per 100g' }}
+                    </div>
+                    <div class="data">
+                        {{ form.carbs_per_100g|placeholder:'Carbs per 100g' }}
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

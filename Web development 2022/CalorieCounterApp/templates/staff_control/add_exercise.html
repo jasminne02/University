@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filter %}
+
+{% block content %}
+    <main class="main-food-add">
+        <div class="center">
+            <div class="container">
+                <div class="text">
+                    Add Exercise Form
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="data">
+                        {{ form.name|placeholder:'Name' }}
+                    </div>
+                    <div class="data">
+                        {{ form.metabolic_equivalent|placeholder:'Metabolic equivalent' }}
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

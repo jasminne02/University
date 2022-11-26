@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="main-plan-details">
+        <section id="plan-details">
+            <h1>Daily Details</h1>
+            <div class="info-section">
+                <div class="plan-header">
+                    <div class="right">
+                        <h1>{{ daily_data.date }}</h1>
+                        {% if food %}
+                            <p><span class="description">Food:</span></p>
+                            {% for f in food %}
+                                <li>{{ f }}</li>
+                            {% endfor %}
+                        {% endif %}
+                        {% if meals %}
+                            <p><span class="description">Meals:</span></p>
+                            {% for meal in meals %}
+                                <li>{{ meal }}</li>
+                            {% endfor %}
+                        {% endif %}
+                        {% if food_plans %}
+                            <p><span class="description">Food plans:</span></p>
+                            {% for plan in food_plans %}
+                                <li>{{ plan }}</li>
+                            {% endfor %}
+                        {% endif %}
+                        {% if activities %}
+                            <p><span class="description">Activity:</span></p>
+                            {% for activity in activities %}
+                                <li>{{ activity }}</li>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

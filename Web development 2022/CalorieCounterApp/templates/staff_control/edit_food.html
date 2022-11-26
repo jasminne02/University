@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filter %}
+
+{% block content %}
+    <main class="main-food-add">
+        <div class="center">
+            <div class="container">
+                <div class="text">
+                    Edit Form
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="data">
+                        <label>
+                            <input disabled value="{{ food.name }}">
+                        </label>
+                    </div>
+                    <div class="data">
+                        <label>Calories per 100g{{ form.calories_per_100g }}</label>
+                    </div>
+                    <div class="data">
+                        <label>Fats{{ form.fats_per_100g }}</label>
+                    </div>
+                    <div class="data">
+                        <label>Carbs{{ form.carbs_per_100g }}</label>
+                    </div>
+                    <div class="data">
+                        <label>Protein{{ form.protein_per_100g }}</label>
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">Edit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

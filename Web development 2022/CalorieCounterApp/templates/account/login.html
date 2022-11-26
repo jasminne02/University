@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filter %}
+
+{% block content %}
+    <main class="main-login">
+        <div class="center">
+            <div class="container">
+                <div class="text">
+                    Login Form
+                </div>
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="data">
+                        {{ form.username|placeholder:'Username' }}
+                    </div>
+                    <div class="data">
+                        {{ form.password|placeholder:'Password' }}
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">login</button>
+                    </div>
+                    <div class="signup-link">
+                        Not a member? <a href="{% url 'register' %}">Signup now</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

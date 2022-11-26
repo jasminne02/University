@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filter %}
+
+{% block content %}
+    <main class="main-profile-edit">
+        <div class="center">
+            <div class="container">
+                <div class="text">
+                    Edit Form
+                </div>
+                <form method="post" action="{% url 'profile edit' username=customuser.username %}">
+                    {% csrf_token %}
+                    <div class="data">
+                        {{ form.height|placeholder:'Height(cm)' }}
+                        <div class="error">{{ form.height.errors }}</div>
+                    </div>
+                    <div class="data">
+                        {{ form.weight|placeholder:'Weight(kg)' }}
+                        <div class="error">{{ form.weight.errors }}</div>
+                    </div>
+                    <div class="data">
+                        {{ form.profile_image|placeholder:'Image URL' }}
+                        <div class="error">{{ form.profile_image.errors }}</div>
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">Edit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

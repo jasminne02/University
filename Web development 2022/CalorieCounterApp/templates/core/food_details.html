@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="main-plan-details">
+        <section id="plan-details">
+            <h1>Food Plan Details</h1>
+            <div class="info-section">
+                <div class="plan-header">
+                    <div class="left">
+                        <img class="food-img" src="{{ foodplan.image_url }}" alt='food image'/>
+                        <a href="{% url 'add plan for the day' pk=foodplan.pk %}" class="add-button">Add for the day</a>
+                    </div>
+                    <div class="right">
+                        <h1>{{ foodplan.name }}</h1>
+                        <p><span class="description">Total calories: {{ foodplan.calories|floatformat:0 }}cal</span></p>
+                        <p><span class="description">Total quantity: {{ foodplan.grams|floatformat:0 }}grams</span></p>
+                        <p><span class="description">Meals:</span></p>
+                        {% for meal in meals %}
+                            <li>{{ meal }} ({{ meal.calories|floatformat:0 }}cal) - {{ meal.grams }}g.</li>
+                        {% endfor %}
+                        {% if food %}
+                            <p><span class="description">Food:</span></p>
+                            {% for f in food %}
+                                <li>{{ f }} ({{ f.calories|floatformat:0 }}cal) - 100g.</li>
+                            {% endfor %}
+                        {% endif %}
+                        {% if foodplan.details %}
+                            <p><span class="description">Details: {{ foodplan.details }}</span></p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
