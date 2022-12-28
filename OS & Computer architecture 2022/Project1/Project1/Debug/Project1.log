@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\Users\jasmi\source\repos\Project1\Project1\Source.cpp(32,3): warning C4102: 'return': unreferenced label
+  Project1.vcxproj -> C:\Users\jasmi\source\repos\Project1\Debug\Project1.exe
