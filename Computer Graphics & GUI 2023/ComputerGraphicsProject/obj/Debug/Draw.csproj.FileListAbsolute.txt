@@ -1,0 +1,9 @@
+C:\Users\jasmi\Documents\VisualStudioProjects\C#\VisualStudio2008-WinForms\bin\Debug\Draw.exe
+C:\Users\jasmi\Documents\VisualStudioProjects\C#\VisualStudio2008-WinForms\bin\Debug\Draw.pdb
+C:\Users\jasmi\Documents\VisualStudioProjects\C#\VisualStudio2008-WinForms\obj\Debug\Draw.csproj.AssemblyReference.cache
+C:\Users\jasmi\Documents\VisualStudioProjects\C#\VisualStudio2008-WinForms\obj\Debug\Draw.DoubleBufferedPanel.resources
+C:\Users\jasmi\Documents\VisualStudioProjects\C#\VisualStudio2008-WinForms\obj\Debug\Draw.MainForm.resources
+C:\Users\jasmi\Documents\VisualStudioProjects\C#\VisualStudio2008-WinForms\obj\Debug\Draw.csproj.GenerateResource.cache
+C:\Users\jasmi\Documents\VisualStudioProjects\C#\VisualStudio2008-WinForms\obj\Debug\Draw.csproj.CoreCompileInputs.cache
+C:\Users\jasmi\Documents\VisualStudioProjects\C#\VisualStudio2008-WinForms\obj\Debug\Draw.exe
+C:\Users\jasmi\Documents\VisualStudioProjects\C#\VisualStudio2008-WinForms\obj\Debug\Draw.pdb
