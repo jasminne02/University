@@ -1,0 +1,3 @@
+f(X,Res):- X=< 1, X\=(-1), Res is log10(X+1).
+f(X,Res):- X>=1, X\=5, Res is X*X*X + 3/X.
+f(X,Res):- X=(-1) ; X=5, Res is X.
