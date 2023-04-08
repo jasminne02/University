@@ -1,0 +1,9 @@
+CREATE TABLE person(
+    id int primary key,
+    firstName varchar,
+    lastName varchar,
+    gender varchar,
+    age varchar,
+    salary varchar
+)
+
