@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="HomeFrame">
+  <grid id="27dc6" binding="HomePanel" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-1966103"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="3a6a7" class="javax.swing.JLabel" binding="welcomeLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Fira Code" size="16"/>
+          <foreground color="-10780673"/>
+          <text value="Label"/>
+        </properties>
+      </component>
+      <vspacer id="154ed">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="dd0c2" class="javax.swing.JButton" binding="profileButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-10780673"/>
+          <font name="Fira Code" size="12"/>
+          <foreground color="-3866663"/>
+          <text value="Profile"/>
+        </properties>
+      </component>
+      <hspacer id="85cf">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <grid id="827f1" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1966103"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="36bd1" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="3ccf0" class="javax.swing.JButton" binding="createMusicButton">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3866663"/>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-29166"/>
+                  <text value="Create"/>
+                </properties>
+              </component>
+              <component id="913ef" class="javax.swing.JButton" binding="editMusicButton">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3866663"/>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-29166"/>
+                  <text value="Edit"/>
+                </properties>
+              </component>
+              <component id="17119" class="javax.swing.JButton" binding="deleteMusicButton">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3866663"/>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-29166"/>
+                  <text value="Delete"/>
+                </properties>
+              </component>
+              <component id="64a94" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Fira Code" size="16" style="1"/>
+                  <foreground color="-10780673"/>
+                  <text value="Music"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="17620" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <foreground color="-1"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="65e0c" class="javax.swing.JButton" binding="createAlbumButton">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3866663"/>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-29166"/>
+                  <text value="Create"/>
+                </properties>
+              </component>
+              <component id="af55" class="javax.swing.JButton" binding="editAlbumButton">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3866663"/>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-29166"/>
+                  <text value="Edit"/>
+                </properties>
+              </component>
+              <component id="35dd6" class="javax.swing.JButton" binding="deleteAlbumButton">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3866663"/>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-29166"/>
+                  <text value="Delete"/>
+                </properties>
+              </component>
+              <component id="45be7" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Fira Code" size="16" style="1"/>
+                  <foreground color="-10780673"/>
+                  <text value="Albums"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="498f9" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="f4d29" class="javax.swing.JButton" binding="createPlaylistButton">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3866663"/>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-29166"/>
+                  <text value="Create"/>
+                </properties>
+              </component>
+              <component id="5d227" class="javax.swing.JButton" binding="editPlaylistButton">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3866663"/>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-29166"/>
+                  <text value="Edit"/>
+                </properties>
+              </component>
+              <component id="e3517" class="javax.swing.JButton" binding="deletePlaylistButton">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3866663"/>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-29166"/>
+                  <text value="Delete"/>
+                </properties>
+              </component>
+              <component id="e42de" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Fira Code" size="16" style="1"/>
+                  <foreground color="-10780673"/>
+                  <text value="Playlists"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <component id="b4419" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Fira Code" size="16"/>
+          <foreground color="-29166"/>
+          <text value="Choose an option :)"/>
+        </properties>
+      </component>
+      <component id="a7b7d" class="javax.swing.JButton" binding="searchContentButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="Fira Code" size="12"/>
+          <foreground color="-29166"/>
+          <text value="Search Content"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
