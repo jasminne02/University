@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "BGToll";
+}
+
+<h2>BGToll</h2>
+
+@using (Html.BeginForm())
+{
+    <p>Номер на автомобил @Html.TextBox("car_id")
+        <input type"submit" value="проверка"/>
+    </p>
+}
+
+<p>Valid until: @ViewData["validUntil"]</p>
+<p>Valid until: @ViewData["number"]</p>
+
+<p>Result: @ViewData["body"]</p>
+
+
