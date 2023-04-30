@@ -1,0 +1,40 @@
+C:\Users\fmi\source\repos\EventManager\SOAP\obj\Debug\SOAP.csprojAssemblyReference.cache
+C:\Users\fmi\source\repos\EventManager\SOAP\obj\Debug\SOAP.csproj.CoreCompileInputs.cache
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\SOAP.dll.config
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\SOAP.dll
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\SOAP.pdb
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\ApplicationService.dll
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\Repository.dll
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\Data.dll
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\EntityFramework.dll
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\ApplicationService.pdb
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\Repository.pdb
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\Repository.dll.config
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\Data.pdb
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\Data.dll.config
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\EntityFramework.xml
+C:\Users\fmi\source\repos\EventManager\SOAP\obj\Debug\SOAP.csproj.CopyComplete
+C:\Users\fmi\source\repos\EventManager\SOAP\obj\Debug\SOAP.dll
+C:\Users\fmi\source\repos\EventManager\SOAP\obj\Debug\SOAP.pdb
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\fmi\source\repos\EventManager\SOAP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\SOAP.dll.config
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\SOAP.dll
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\SOAP.pdb
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\ApplicationService.dll
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\EntityFramework.dll
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\Repository.dll
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\Data.dll
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\ApplicationService.pdb
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\EntityFramework.xml
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\Repository.pdb
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\Repository.dll.config
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\Data.pdb
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\bin\Debug\Data.dll.config
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\obj\Debug\SOAP.csprojAssemblyReference.cache
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\obj\Debug\SOAP.csproj.CoreCompileInputs.cache
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\obj\Debug\SOAP.csproj.CopyComplete
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\obj\Debug\SOAP.dll
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\SOAP\obj\Debug\SOAP.pdb

@@ -1,0 +1,42 @@
+C:\Users\fmi\source\repos\EventManager\Data\bin\Debug\Data.dll.config
+C:\Users\fmi\source\repos\EventManager\Data\bin\Debug\Data.dll
+C:\Users\fmi\source\repos\EventManager\Data\bin\Debug\Data.pdb
+C:\Users\fmi\source\repos\EventManager\Data\bin\Debug\EntityFramework.dll
+C:\Users\fmi\source\repos\EventManager\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\fmi\source\repos\EventManager\Data\bin\Debug\EntityFramework.xml
+C:\Users\fmi\source\repos\EventManager\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\fmi\source\repos\EventManager\Data\obj\Debug\Data.csprojAssemblyReference.cache
+C:\Users\fmi\source\repos\EventManager\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\fmi\source\repos\EventManager\Data\obj\Debug\Data.csproj.CopyComplete
+C:\Users\fmi\source\repos\EventManager\Data\obj\Debug\Data.dll
+C:\Users\fmi\source\repos\EventManager\Data\obj\Debug\Data.pdb
+C:\Users\fmi\source\repos\EventManager\Data\obj\Debug\Data.Migrations.First.resources
+C:\Users\fmi\source\repos\EventManager\Data\obj\Debug\Data.csproj.GenerateResource.cache
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\bin\Debug\Data.dll.config
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\bin\Debug\Data.dll
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\bin\Debug\Data.pdb
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\bin\Debug\EntityFramework.dll
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\bin\Debug\EntityFramework.xml
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\obj\Debug\Data.csprojAssemblyReference.cache
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\obj\Debug\Data.csproj.CopyComplete
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\obj\Debug\Data.dll
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\obj\Debug\Data.pdb
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\obj\Debug\Data.Migrations.Initial.resources
+C:\Users\Viktor Matanski\Documents\EventManager-v1\EventManager\Data\obj\Debug\Data.csproj.GenerateResource.cache
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\bin\Debug\Data.dll.config
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\bin\Debug\Data.dll
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\bin\Debug\Data.pdb
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\bin\Debug\EntityFramework.dll
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\bin\Debug\EntityFramework.xml
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\obj\Debug\Data.csproj.AssemblyReference.cache
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\obj\Debug\Data.Migrations.Initial.resources
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\obj\Debug\Data.csproj.GenerateResource.cache
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\obj\Debug\Data.csproj.CopyComplete
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\obj\Debug\Data.dll
+C:\Users\jasmi\Downloads\Week 4 - Relationships\EventManager-v2\EventManager\Data\obj\Debug\Data.pdb
