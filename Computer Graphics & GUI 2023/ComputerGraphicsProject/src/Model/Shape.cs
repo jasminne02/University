@@ -29,8 +29,8 @@ namespace Draw
 			this.Location = shape.Location;
 			this.rectangle = shape.rectangle;
 			
-			this.FillColor =  shape.FillColor;
-			this.BorderColor = shape.BorderColor;
+			this.fillColor =  shape.FillColor;
+			this.borderColor = shape.BorderColor;
 			this.transparency = shape.transparency;
 			this.borderSize = shape.borderSize;
 			this.angle = shape.angle;

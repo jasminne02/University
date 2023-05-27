@@ -92,6 +92,8 @@
             this.btnAddString = new System.Windows.Forms.Button();
             this.transparencyTrackBar = new System.Windows.Forms.TrackBar();
             this.rotateTrackBar = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.viewPort = new Draw.DoubleBufferedPanel();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
@@ -284,6 +286,7 @@
             // 
             // speedMenu
             // 
+            this.speedMenu.AutoSize = false;
             this.speedMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.speedMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pickUpSpeedButton,
@@ -304,7 +307,7 @@
             this.toolStripButton1});
             this.speedMenu.Location = new System.Drawing.Point(0, 24);
             this.speedMenu.Name = "speedMenu";
-            this.speedMenu.Size = new System.Drawing.Size(1385, 27);
+            this.speedMenu.Size = new System.Drawing.Size(1385, 45);
             this.speedMenu.Stretch = true;
             this.speedMenu.TabIndex = 3;
             this.speedMenu.Text = "toolStrip1";
@@ -316,7 +319,7 @@
             this.pickUpSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("pickUpSpeedButton.Image")));
             this.pickUpSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pickUpSpeedButton.Name = "pickUpSpeedButton";
-            this.pickUpSpeedButton.Size = new System.Drawing.Size(24, 24);
+            this.pickUpSpeedButton.Size = new System.Drawing.Size(24, 42);
             this.pickUpSpeedButton.Text = "selectShape";
             // 
             // drawLineSpeedButton
@@ -325,7 +328,7 @@
             this.drawLineSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawLineSpeedButton.Image")));
             this.drawLineSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.drawLineSpeedButton.Name = "drawLineSpeedButton";
-            this.drawLineSpeedButton.Size = new System.Drawing.Size(24, 24);
+            this.drawLineSpeedButton.Size = new System.Drawing.Size(24, 42);
             this.drawLineSpeedButton.Text = "drawLineButton";
             this.drawLineSpeedButton.Click += new System.EventHandler(this.DrawLineSpeedButtonClick);
             // 
@@ -335,7 +338,7 @@
             this.drawDotSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawDotSpeedButton.Image")));
             this.drawDotSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.drawDotSpeedButton.Name = "drawDotSpeedButton";
-            this.drawDotSpeedButton.Size = new System.Drawing.Size(24, 24);
+            this.drawDotSpeedButton.Size = new System.Drawing.Size(24, 42);
             this.drawDotSpeedButton.Text = "drawDotButton";
             this.drawDotSpeedButton.Click += new System.EventHandler(this.DrawDotSpeedButtonClick);
             // 
@@ -345,7 +348,7 @@
             this.drawCircleSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawCircleSpeedButton.Image")));
             this.drawCircleSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.drawCircleSpeedButton.Name = "drawCircleSpeedButton";
-            this.drawCircleSpeedButton.Size = new System.Drawing.Size(24, 24);
+            this.drawCircleSpeedButton.Size = new System.Drawing.Size(24, 42);
             this.drawCircleSpeedButton.Text = "drawCircleButton";
             this.drawCircleSpeedButton.Click += new System.EventHandler(this.DrawCircleSpeedButtonClick);
             // 
@@ -355,7 +358,7 @@
             this.drawEllipseSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawEllipseSpeedButton.Image")));
             this.drawEllipseSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.drawEllipseSpeedButton.Name = "drawEllipseSpeedButton";
-            this.drawEllipseSpeedButton.Size = new System.Drawing.Size(24, 24);
+            this.drawEllipseSpeedButton.Size = new System.Drawing.Size(24, 42);
             this.drawEllipseSpeedButton.Text = "drawEllipseButton";
             this.drawEllipseSpeedButton.Click += new System.EventHandler(this.DrawEllipseSpeedButtonClick);
             // 
@@ -365,7 +368,7 @@
             this.drawTriangleSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawTriangleSpeedButton.Image")));
             this.drawTriangleSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.drawTriangleSpeedButton.Name = "drawTriangleSpeedButton";
-            this.drawTriangleSpeedButton.Size = new System.Drawing.Size(24, 24);
+            this.drawTriangleSpeedButton.Size = new System.Drawing.Size(24, 42);
             this.drawTriangleSpeedButton.Text = "drawTriangleButton";
             this.drawTriangleSpeedButton.Click += new System.EventHandler(this.DrawTriangleSpeedButtonClick);
             // 
@@ -375,7 +378,7 @@
             this.drawSquareSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawSquareSpeedButton.Image")));
             this.drawSquareSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.drawSquareSpeedButton.Name = "drawSquareSpeedButton";
-            this.drawSquareSpeedButton.Size = new System.Drawing.Size(24, 24);
+            this.drawSquareSpeedButton.Size = new System.Drawing.Size(24, 42);
             this.drawSquareSpeedButton.Text = "drawSquareButton";
             this.drawSquareSpeedButton.Click += new System.EventHandler(this.DrawSquareSpeedButtonClick);
             // 
@@ -385,7 +388,7 @@
             this.drawRectangleSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawRectangleSpeedButton.Image")));
             this.drawRectangleSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.drawRectangleSpeedButton.Name = "drawRectangleSpeedButton";
-            this.drawRectangleSpeedButton.Size = new System.Drawing.Size(24, 24);
+            this.drawRectangleSpeedButton.Size = new System.Drawing.Size(24, 42);
             this.drawRectangleSpeedButton.Text = "DrawRectangleButton";
             this.drawRectangleSpeedButton.Click += new System.EventHandler(this.DrawRectangleSpeedButtonClick);
             // 
@@ -395,7 +398,7 @@
             this.drawPentagonSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawPentagonSpeedButton.Image")));
             this.drawPentagonSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.drawPentagonSpeedButton.Name = "drawPentagonSpeedButton";
-            this.drawPentagonSpeedButton.Size = new System.Drawing.Size(24, 24);
+            this.drawPentagonSpeedButton.Size = new System.Drawing.Size(24, 42);
             this.drawPentagonSpeedButton.Text = "drawPentagonButton";
             this.drawPentagonSpeedButton.Click += new System.EventHandler(this.DrawPentagonSpeedButtonClick);
             // 
@@ -405,7 +408,7 @@
             this.drawHexagonShape.Image = ((System.Drawing.Image)(resources.GetObject("drawHexagonShape.Image")));
             this.drawHexagonShape.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.drawHexagonShape.Name = "drawHexagonShape";
-            this.drawHexagonShape.Size = new System.Drawing.Size(24, 24);
+            this.drawHexagonShape.Size = new System.Drawing.Size(24, 42);
             this.drawHexagonShape.Text = "drawHexagonButton";
             this.drawHexagonShape.Click += new System.EventHandler(this.DrawHexagonSpeedButtonClick);
             // 
@@ -415,7 +418,7 @@
             this.drawStarSpeedButton.Image = ((System.Drawing.Image)(resources.GetObject("drawStarSpeedButton.Image")));
             this.drawStarSpeedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.drawStarSpeedButton.Name = "drawStarSpeedButton";
-            this.drawStarSpeedButton.Size = new System.Drawing.Size(24, 24);
+            this.drawStarSpeedButton.Size = new System.Drawing.Size(24, 42);
             this.drawStarSpeedButton.Text = "drawStarButton";
             this.drawStarSpeedButton.Click += new System.EventHandler(this.DrawStarSpeedButtonClick);
             // 
@@ -425,7 +428,7 @@
             this.heartShapeButton.Image = ((System.Drawing.Image)(resources.GetObject("heartShapeButton.Image")));
             this.heartShapeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.heartShapeButton.Name = "heartShapeButton";
-            this.heartShapeButton.Size = new System.Drawing.Size(24, 24);
+            this.heartShapeButton.Size = new System.Drawing.Size(24, 42);
             this.heartShapeButton.Text = "toolStripButton2";
             this.heartShapeButton.Click += new System.EventHandler(this.heartShapeButton_Click);
             // 
@@ -435,7 +438,7 @@
             this.ickBorderColorButton.Image = ((System.Drawing.Image)(resources.GetObject("ickBorderColorButton.Image")));
             this.ickBorderColorButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ickBorderColorButton.Name = "ickBorderColorButton";
-            this.ickBorderColorButton.Size = new System.Drawing.Size(24, 24);
+            this.ickBorderColorButton.Size = new System.Drawing.Size(24, 42);
             this.ickBorderColorButton.Text = "pickBorderColorButton";
             this.ickBorderColorButton.Click += new System.EventHandler(this.PickBorderColorButtonClick);
             // 
@@ -445,7 +448,7 @@
             this.pickFillColorButton.Image = ((System.Drawing.Image)(resources.GetObject("pickFillColorButton.Image")));
             this.pickFillColorButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pickFillColorButton.Name = "pickFillColorButton";
-            this.pickFillColorButton.Size = new System.Drawing.Size(24, 24);
+            this.pickFillColorButton.Size = new System.Drawing.Size(24, 42);
             this.pickFillColorButton.Text = "pickFillColorButton";
             this.pickFillColorButton.Click += new System.EventHandler(this.PickFillColorButtonClick);
             // 
@@ -460,7 +463,7 @@
             this.borderSizeButton.Image = ((System.Drawing.Image)(resources.GetObject("borderSizeButton.Image")));
             this.borderSizeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.borderSizeButton.Name = "borderSizeButton";
-            this.borderSizeButton.Size = new System.Drawing.Size(33, 24);
+            this.borderSizeButton.Size = new System.Drawing.Size(33, 42);
             this.borderSizeButton.Text = "pickBorderSizeButton";
             this.borderSizeButton.Click += new System.EventHandler(this.BorderSizeButtonClick);
             // 
@@ -505,7 +508,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(33, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(33, 42);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -581,7 +584,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(744, 24);
+            this.button1.Location = new System.Drawing.Point(731, 39);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 24);
@@ -592,7 +595,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(684, 24);
+            this.button2.Location = new System.Drawing.Point(671, 39);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 24);
@@ -603,7 +606,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(908, 24);
+            this.button3.Location = new System.Drawing.Point(895, 36);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(55, 25);
@@ -614,7 +617,7 @@
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(804, 24);
+            this.nameTextBox.Location = new System.Drawing.Point(791, 39);
             this.nameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(100, 20);
@@ -623,14 +626,14 @@
             // 
             // textBoxString
             // 
-            this.textBoxString.Location = new System.Drawing.Point(968, 24);
+            this.textBoxString.Location = new System.Drawing.Point(955, 39);
             this.textBoxString.Name = "textBoxString";
             this.textBoxString.Size = new System.Drawing.Size(100, 20);
             this.textBoxString.TabIndex = 9;
             // 
             // btnAddString
             // 
-            this.btnAddString.Location = new System.Drawing.Point(1074, 24);
+            this.btnAddString.Location = new System.Drawing.Point(1061, 36);
             this.btnAddString.Name = "btnAddString";
             this.btnAddString.Size = new System.Drawing.Size(75, 23);
             this.btnAddString.TabIndex = 10;
@@ -656,13 +659,31 @@
             this.rotateTrackBar.TabIndex = 12;
             this.rotateTrackBar.Scroll += new System.EventHandler(this.rotateTrackBar_Scroll);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(435, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Transparency";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(542, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Rotate Shape";
+            // 
             // viewPort
             // 
             this.viewPort.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewPort.Location = new System.Drawing.Point(0, 51);
+            this.viewPort.Location = new System.Drawing.Point(0, 69);
             this.viewPort.Margin = new System.Windows.Forms.Padding(4);
             this.viewPort.Name = "viewPort";
-            this.viewPort.Size = new System.Drawing.Size(1385, 508);
+            this.viewPort.Size = new System.Drawing.Size(1385, 490);
             this.viewPort.TabIndex = 4;
             this.viewPort.Load += new System.EventHandler(this.viewPort_Load);
             this.viewPort.Paint += new System.Windows.Forms.PaintEventHandler(this.ViewPortPaint);
@@ -675,6 +696,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1385, 581);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.rotateTrackBar);
             this.Controls.Add(this.transparencyTrackBar);
             this.Controls.Add(this.btnAddString);
@@ -770,5 +793,7 @@
         private System.Windows.Forms.ToolStripButton heartShapeButton;
         private System.Windows.Forms.TrackBar transparencyTrackBar;
         private System.Windows.Forms.TrackBar rotateTrackBar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

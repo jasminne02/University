@@ -32,6 +32,7 @@ namespace Draw
         private void MainForm_Load(object sender, EventArgs e)
         {
             transparencyTrackBar.Value = transparencyTrackBar.Maximum;
+            speedMenu.Height= 50;
         }
 
         /// <summary>
@@ -228,14 +229,14 @@ namespace Draw
                         {
                             dialogProcessor.Selection.Add(selectedShape);
                         }
-                        selectedShape.BorderSize = 2; // Увеличава размера
+                        selectedShape.BorderSize *= 2; // Увеличава размера
                     }
                     else
                     {
                         
                         dialogProcessor.Selection.Clear();
                         dialogProcessor.Selection.Add(selectedShape);
-                        selectedShape.BorderSize = 2; 
+                        selectedShape.BorderSize *= 2; 
                     }
 
                     statusBar.Items[0].Text = "Последно действие: Селекция на примитив";
@@ -276,7 +277,7 @@ namespace Draw
 
                 if (selectedShape != null && (Control.ModifierKeys & Keys.Control) != Keys.Control)
                 {
-                    selectedShape.BorderSize = 1; // Ресетва size до default
+                    selectedShape.BorderSize /= 2; // Ресетва size до default
                     viewPort.Invalidate();
                 }
             }
@@ -607,6 +608,6 @@ namespace Draw
 
         }
 
-       
+        
     }
 }

@@ -194,7 +194,7 @@ namespace Draw
         }
         public void AddRandomHeart()
         {
-            // Generate random dimensions for the heart shape
+          
             Random rnd = new Random();
             int x = rnd.Next(100, 1000);
             int y = rnd.Next(100, 600);
@@ -231,13 +231,13 @@ namespace Draw
                 GroupShape groupShape = new GroupShape(groupBounds);
                 groupShape.Shapes.AddRange(selection);
 
-                // Remove the shapes from ShapeList using RemoveAll()
+                // Изчиства ShapeList RemoveAll()
                 ShapeList.RemoveAll(shape => selection.Contains(shape));
 
-                // Add the new group to ShapeList
+                // Адва нова група groupShape
                 ShapeList.Add(groupShape);
 
-                // Select the new group
+                
                 selection.Clear();
                 selection.Add(groupShape);
             }
@@ -355,7 +355,7 @@ namespace Draw
             {
                 if (item.Size > 0 && size == 1)
                 {
-                    // original size selected
+                    
                     item.Height /= item.Size;
                     item.Width /= item.Size;
                     item.Size = 0;
@@ -464,39 +464,39 @@ namespace Draw
             int y = rnd.Next(100, 600);
             foreach (Shape item in Selection)
             {
-                if (selection.GetType() == typeof(CircleShape))
+                if (item.GetType() == typeof(CircleShape))
                 {
                     copy = new CircleShape(new Rectangle(x, y, 100, 100));
                 }
-                else if (selection.GetType() == typeof(DotShape))
+                else if (item.GetType() == typeof(DotShape))
                 {
                     copy = new DotShape(new Rectangle(x, y, 100, 100));
                 }
-                else if (selection.GetType() == typeof(EllipseShape))
+                else if (item.GetType() == typeof(EllipseShape))
                 {
                     copy = new EllipseShape(new Rectangle(x, y, 100, 100));
                 }
-                else if (selection.GetType() == typeof(HexagonShape))
+                else if (item.GetType() == typeof(HexagonShape))
                 {
                     copy = new HexagonShape(new Rectangle(x, y, 100, 100));
                 }
-                else if (selection.GetType() == typeof(ImageShape))
+                else if (item.GetType() == typeof(ImageShape))
                 {
                     copy = new ImageShape(((ImageShape)item).Image, new Rectangle(x, y, 100, 100));
                 }
-                else if (selection.GetType() == typeof(LineShape))
+                else if (item.GetType() == typeof(LineShape))
                 {
                     copy = new LineShape(new Rectangle(x, y, 100, 100));
                 }
-                else if (selection.GetType() == typeof(PentagonShape))
+                else if (item.GetType() == typeof(PentagonShape))
                 {
                     copy = new PentagonShape(new Rectangle(x, y, 100, 100));
                 }
-                else if (selection.GetType() == typeof(RectangleShape))
+                else if (item.GetType() == typeof(RectangleShape))
                 {
                     copy = new RectangleShape(new Rectangle(x, y, 100, 100));
                 }
-                else if (selection.GetType() == typeof(StarShape))
+                else if (item.GetType() == typeof(StarShape))
                 {
                     copy = new StarShape(new Rectangle(x, y, 100, 100));
                 }
