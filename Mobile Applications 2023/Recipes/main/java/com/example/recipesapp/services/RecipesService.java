@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class RecipesService {
     private static final String url = "https://food-recipes-with-images.p.rapidapi.com/";
     private static final String api_key = "X-RapidAPI-Key";
-    private static final String api_key_value = "f39104a00fmsh6c3951d094ee116p18250cjsn8c60fb7352a5";
+    private static final String api_key_value = "x";
 
     public static JSONObject getRecipes(String queryParams) throws IOException {
         URLConnection connection = new URL(url + "?q=" + queryParams.replace(' ', '+'))
